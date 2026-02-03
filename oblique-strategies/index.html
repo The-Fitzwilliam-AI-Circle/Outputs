@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oblique Strategies for Research</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Oblique Strategies</h1>
+    <p class="subtitle">Over one hundred worthwhile dilemmas — adapted for research domains</p>
+  </header>
+
+  <main>
+    <nav class="domain-selector" aria-label="Domain selection">
+      <!-- Chips injected by app.js -->
+    </nav>
+
+    <section class="card-area">
+      <div class="card" id="strategy-card">
+        <div class="card-title-row">
+          <h2 class="card-title" id="card-title">Draw a card to begin</h2>
+          <button class="info-btn" id="info-btn" aria-label="Show explanation" hidden>
+            <span class="info-icon">ⓘ</span>
+          </button>
+        </div>
+        <div class="tooltip" id="tooltip" hidden></div>
+        <p class="prompt" id="card-prompt"></p>
+      </div>
+    </section>
+
+    <button class="draw-btn" id="draw-btn">Draw a card</button>
+  </main>
+
+  <footer>
+    <p>Inspired by Brian Eno &amp; Peter Schmidt's <em>Oblique Strategies</em></p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
