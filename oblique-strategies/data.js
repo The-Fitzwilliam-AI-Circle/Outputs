@@ -14,7 +14,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["What could you sense before you understood why it worked?","The classical sensor in your pocket is already very good - what can't it do?","Stop building the sensor. Borrow one. See what happens.","What would you measure if coherence time weren't a constraint?"],
       "Economics": ["What would you learn if you couldn't regress?","The price is a sensor — what other signals are you ignoring?","Talk to people before you build the survey","What did economists understand before econometrics?"],
       "Philosophy": ["What would you know if you couldn't use thought experiments?","Put down the logical notation. Can you still make the argument?","The tradition gave you categories. What do you see without them?","What did philosophers understand before analytic philosophy separated everything?"],
-      "Software Engineering": ["What would you build if you couldn't use a framework?","Write it in a language you don't know. What does the unfamiliarity reveal?","Delete the ORM. Write the SQL. See what you've been hiding from","What did programmers understand before the abstractions you depend on?"]
+      "Software Engineering": ["What would you build if you couldn't use a framework?","Write it in a language you don't know. What does the unfamiliarity reveal?","Delete the ORM. Write the SQL. See what you've been hiding from","What did programmers understand before the abstractions you depend on?"],
+      "Neural Architecture": ["What if you couldn't measure the loss?","The gradient told you where — what else knows?","Watch the activations, not the weights","What did Hebb notice without backpropagation?"]
     }
   },
   {
@@ -32,7 +33,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Ask the field biologist what they actually need to measure","What do metrologists know about error that physicists find boring?","The engineer who rejected your prototype - why?","What does the person with the problem wish they could sense?"],
       "Economics": ["What do traders know that academics find distasteful?","Ask the historian why this happened before","The anthropologist watched the market. You modeled it. Who learned more?","What does the policy-maker need that your paper doesn't provide?"],
       "Philosophy": ["What does the novelist know about consciousness that you can't formalize?","Ask the physicist what \"real\" means. Their answer will be different from yours","The theologian's objection isn't naive — it's coming from a framework you've dismissed too quickly","What does ordinary language tell you that regimented language conceals?"],
-      "Software Engineering": ["What does the ops team know that the architects find beneath them?","Ask the user who filed the bug. They understand the system differently than you do","The intern's question — \"why is it done this way?\" — deserves an actual answer","What does the support engineer see every day that never reaches your backlog?"]
+      "Software Engineering": ["What does the ops team know that the architects find beneath them?","Ask the user who filed the bug. They understand the system differently than you do","The intern's question — \"why is it done this way?\" — deserves an actual answer","What does the support engineer see every day that never reaches your backlog?"],
+      "Neural Architecture": ["What do developmental biologists know about growth that you're ignoring?","Ask the pruning people — they found the structure you're trying to grow","What would a type theorist find ill-formed about your expansion rule?","The network that failed to learn was also trying to tell you something"]
     }
   },
   {
@@ -50,7 +52,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Start with one qubit doing one useful thing","What's the smallest quantum advantage that someone would pay for?","Don't build the ideal sensor - build the path to it","Iterate in the field, not just the lab"],
       "Economics": ["One case study, deeply understood, before the cross-country regression","Collect the data yourself, once, by hand","What would you learn from the same place over twenty years?","The economy is a process — why is your model a snapshot?"],
       "Philosophy": ["One careful distinction before the system","Sit with the confusion longer. The premature clarity is the mistake","Add one example. Then another. Don't theorize yet","Philosophy advances by small corrections, not revolutions. Make the small correction"],
-      "Software Engineering": ["One function, working correctly, before the architecture","Add one test. Then another. Don't refactor yet","What would you learn from maintaining this system for ten years?","The codebase is a living thing — why does your design treat it as a blueprint?"]
+      "Software Engineering": ["One function, working correctly, before the architecture","Add one test. Then another. Don't refactor yet","What would you learn from maintaining this system for ten years?","The codebase is a living thing — why does your design treat it as a blueprint?"],
+      "Neural Architecture": ["One neuron. See what it does. Then another.","The brain doesn't know its final size either","Growth is already a learning rule — let it be slow","What if the architecture is never finished?"]
     }
   },
   {
@@ -68,7 +71,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Sensitivity to the signal is sensitivity to the noise","The fragility that limits you is the sensitivity that enables you","Quantum is an advantage and a constraint","The environment that decoheres is also the thing you're trying to measure"],
       "Economics": ["The incentive that solves one problem creates another","Efficiency and resilience trade off — which did you assume away?","The rational actor is a simplification and a blindfold","Your identification strategy excludes the cases that don't fit"],
       "Philosophy": ["The distinction that clarifies one problem obscures another","Free will and determinism are the poles. You've been standing at one end","Your argument proves too much. What does it accidentally eliminate?","Every necessary condition is also a prison"],
-      "Software Engineering": ["The abstraction that simplifies one thing complicates another","Performance and readability trade off — which did you assume away?","The type system is a safety net and a straitjacket","Your API boundary excludes the use cases that don't fit"]
+      "Software Engineering": ["The abstraction that simplifies one thing complicates another","Performance and readability trade off — which did you assume away?","The type system is a safety net and a straitjacket","Your API boundary excludes the use cases that don't fit"],
+      "Neural Architecture": ["The instability that triggers growth is also noise","The structure you add forecloses the structure that might have emerged","Capacity solves interference and creates it","The small network's failure was a form of compression"]
     }
   },
   {
@@ -86,7 +90,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["What if \"quantum advantage\" didn't need to be exponential?","Which benchmark are you chasing because the field chose it, not the application?","Room temperature is a prison you chose","Useful beats pure - what \"impure\" approaches have you dismissed?"],
       "Economics": ["Which assumption exists for tractability, not truth?","What if the equilibrium never arrives?","Let the agents be confused — they are","The clean model that publishes vs the messy one that's right"],
       "Philosophy": ["Which premise exists for elegance, not truth?","What if the hard problem doesn't need solving — only dissolving?","Let the concept be vague. Precision might be the distortion","The system that's clean enough to publish vs the mess that's honest"],
-      "Software Engineering": ["Which constraint exists for convention, not necessity?","What if the system never reaches consistency?","Let the users be confused — they are","The clean architecture that ships vs the messy one that works"]
+      "Software Engineering": ["Which constraint exists for convention, not necessity?","What if the system never reaches consistency?","Let the users be confused — they are","The clean architecture that ships vs the messy one that works"],
+      "Neural Architecture": ["What if \"optimal architecture\" isn't the goal?","The mathematical elegance can come later — does it grow?","Which constraint exists because the framework demands it, not the problem?","Let it grow wrong. Prune later."]
     }
   },
   {
@@ -104,7 +109,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Where does the quantum system end and the classical readout begin? That boundary is the sensor","The transition from coherent to incoherent is information, not loss","Map the sections: state preparation → evolution → readout → signal processing. Which one limits you?","The phase transition is itself a sensing resource — critical quantum sensors exploit it"],
       "Economics": ["Where does the boom become the bust? Your model doesn't have a threshold","The transition between regimes is where the interesting economics lives","Your time series has a structural break you're smoothing over","The policy takes effect gradually — why does your model treat it as instant?"],
       "Philosophy": ["Where does epistemology become philosophy of mind? That boundary is the interesting part","Your argument has a gap between premise three and the conclusion. That's where the philosophy is","The transition from the intuition to the principle — is it deduction or persuasion?","Ethics and metaethics bleed into each other. Stop pretending they're separate"],
-      "Software Engineering": ["Where does the frontend end and the backend begin? Is that boundary right?","Your pipeline has stages. What's lost between them?","The interesting bugs live at the boundary between two services","What happens during deployment? You've been thinking about before and after"]
+      "Software Engineering": ["Where does the frontend end and the backend begin? Is that boundary right?","Your pipeline has stages. What's lost between them?","The interesting bugs live at the boundary between two services","What happens during deployment? You've been thinking about before and after"],
+      "Neural Architecture": ["Where does one layer's responsibility end and the next begin? Is that boundary fixed?","The expansion event is a phase transition. What's the order parameter?","The interesting dynamics happen at the boundary between stable and unstable","Growth changes the topology. What happens to information flow at the seam?"]
     }
   },
   {
@@ -122,7 +128,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Ask the AMO physicist to stop optimizing coherence and start optimizing size","Force the theorist to build something that works on a bench","What happens when you ask the classical sensor engineer to use entanglement?","The metrologist's instinct for caution is also blocking the field deployment"],
       "Economics": ["Write the paper arguing the position you think is wrong","What if the market isn't clearing? Proceed from there","Assume your preferred policy causes harm. What's the mechanism?","Defend the heterodox position as though your career didn't depend on orthodoxy"],
       "Philosophy": ["Defend the position you think is obviously false. Seriously","What would a committed skeptic say that you can't answer?","Argue for moral realism if you're an anti-realist. Argue against it if you're not","Make the strongest case for the view you find repugnant"],
-      "Software Engineering": ["What would you do if you were trying to make the system fail?","Deliberately introduce a fault and see how the system responds","What change would embarrass you to propose? Try it","Argue against your own technical decision in the design review"]
+      "Software Engineering": ["What would you do if you were trying to make the system fail?","Deliberately introduce a fault and see how the system responds","What change would embarrass you to propose? Try it","Argue against your own technical decision in the design review"],
+      "Neural Architecture": ["What if you tried to make the expansion rule fail?","Deliberately grow the network at the wrong place. What does it reveal?","Train the small network past the point where you'd normally expand. What survives?","Argue against your own growth criterion. What's the strongest objection?"]
     }
   },
   {
@@ -140,7 +147,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Hold the sensor. Is it too heavy, too fragile, too slow for the person who needs it?","The human body is a source of magnetic, electric, and thermal signals — sense those","Your body already detects gravity, acceleration, and temperature. What does the quantum sensor add?","If the sensor requires a vibration-isolated table, it isn't a sensor — it's a laboratory"],
       "Economics": ["Which coefficient made you uncomfortable but you reported it anyway?","You keep re-running the regression. What are you hoping will change?","The result is significant but you don't believe it. Trust that instinct","Which part of the literature do you avoid citing because it complicates things?"],
       "Philosophy": ["You flinch at the conclusion. Is that evidence or bias?","Which philosophical problem do you feel rather than think?","The intuition pump works on you viscerally. That's data, not contamination","Sit with the paradox physically. Where does the discomfort locate itself?"],
-      "Software Engineering": ["What feels off about this code even though the tests pass?","You flinched when you saw that pull request. Why?","Which part of the codebase do you dread opening?","Where does your attention keep drifting when you're debugging?"]
+      "Software Engineering": ["What feels off about this code even though the tests pass?","You flinched when you saw that pull request. Why?","Which part of the codebase do you dread opening?","Where does your attention keep drifting when you're debugging?"],
+      "Neural Architecture": ["Which layer feels over-constrained even though the metrics say it's fine?","You keep checking the expansion score at that neuron. Why?","The gradient variance is within threshold but something looks wrong. Trust that","Where does your attention keep returning when you visualize the growing network?"]
     }
   },
   {
@@ -158,7 +166,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Combine magnetometer, gravimeter, and clock into one quantum sensing platform","An array of NV centers is not many sensors — it's one imaging device","Treat the sensor network as a distributed quantum system, not independent nodes","The ensemble measurement sacrifices single-atom information for statistical power — is that the right trade?"],
       "Economics": ["Stop estimating parameters separately — what moves together?","The household, the firm, and the regulator are one system","Combine the micro evidence with the macro puzzle instead of choosing sides","Treat the institution and the incentive as inseparable"],
       "Philosophy": ["Combine epistemology, ethics, and aesthetics. What do they share?","Stop treating the intuitions separately. They form a pattern","The mind-body problem, the other-minds problem, and personal identity are one problem","What if the counterexamples aren't separate — what if they're symptoms of the same failure?"],
-      "Software Engineering": ["Combine the database, the cache, and the queue. Treat them as one storage layer","Stop tuning individual services. Move the whole system together","What if your microservices aren't independent but entangled?","Three weak approaches, combined, might outperform one strong one"]
+      "Software Engineering": ["Combine the database, the cache, and the queue. Treat them as one storage layer","Stop tuning individual services. Move the whole system together","What if your microservices aren't independent but entangled?","Three weak approaches, combined, might outperform one strong one"],
+      "Neural Architecture": ["Don't expand one neuron — expand a motif","The gradient, the activation, and the loss are one signal about capacity","What if expansion is a collective property of a layer, not individual neurons?","Stop tuning the growth threshold per-neuron. Move the whole layer together"]
     }
   },
   {
@@ -176,7 +185,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["The protocol must be identical every shot. But the sensing environment never is","Reproducible fabrication enables inconsistent deployment conditions","Standardize the physics, vary the application","Your sensor needs to give the same answer twice before it can give a new answer once"],
       "Economics": ["Your agents are too consistent. Real people contradict themselves","Alternate between theoretical rigor and empirical mess","Some markets clear. Others don't. Use both in the same model","You've been either calibrating or estimating. What would doing both reveal?"],
       "Philosophy": ["Your system is consistent. Reality might not be","Some intuitions contradict each other. Hold both before discarding either","Alternate between rigor and receptivity","You've been either building or critiquing. Do both in the same paper"],
-      "Software Engineering": ["Your system is too uniform. One component should be radically different","Alternate between strict typing and dynamic exploration","Some modules should be stable while others change daily. Which are which?","You've been either building or maintaining. Do both on the same code"]
+      "Software Engineering": ["Your system is too uniform. One component should be radically different","Alternate between strict typing and dynamic exploration","Some modules should be stable while others change daily. Which are which?","You've been either building or maintaining. Do both on the same code"],
+      "Neural Architecture": ["Your growth rule is too predictable. Let some expansions be random","Alternate between growing and freezing. The network needs both","Some layers should be fixed scaffolding while others grow freely. Which?","You've been either growing or training. Do both in the same step"]
     }
   },
   {
@@ -194,7 +204,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["The impurity in the diamond is the sensor. Defects are features","What if the noisy environment contains the signal you want?","Stop working in ultrahigh vacuum. Put the sensor in the dirt, literally","A sensor that only works in pristine conditions isn't a sensor — it's a demonstration"],
       "Economics": ["Use the data before it's been revised. What does the noise tell you?","The preliminary estimate is what the policy-maker actually sees","Stop cleaning outliers — they're the economics you're looking for","Your model should be ugly enough to be true"],
       "Philosophy": ["Use the imprecise word that captures the meaning better","The rigorous version lost the insight. Go back to the rough draft","Submit the argument before you've formalized it completely","An honest mess is more philosophical than a dishonest system"],
-      "Software Engineering": ["Stop linting. What does the messy code express that the clean version lost?","Use the prototype code. The refactored version deleted something important","Ship it before you've fully understood why it works","A working hack is still working"]
+      "Software Engineering": ["Stop linting. What does the messy code express that the clean version lost?","Use the prototype code. The refactored version deleted something important","Ship it before you've fully understood why it works","A working hack is still working"],
+      "Neural Architecture": ["Expand with random initialization. Don't try to preserve the function exactly","The network grew a sloppy connection. It might be the one that matters","Stop waiting for the expansion score to be clean. Grow into the noise","A messy growth event that keeps training stable is better than an elegant one that doesn't"]
     }
   },
   {
@@ -212,7 +223,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Step back from the Ramsey fringe. What physical quantity is the end user actually after?","You've been optimizing T2 for months — does the application need T2 or bandwidth?","Read the geophysics literature, not just the physics literature","The patient doesn't care about spin coherence. They care about the image"],
       "Economics": ["Your sample is too short. Economic time moves slowly","What would this look like at the civilizational scale?","Zoom out. The business cycle is nested inside something larger","You're testing a ten-year theory with three years of data"],
       "Philosophy": ["You're arguing about a sentence. Zoom out to the paragraph. The chapter. The project","What would this look like at civilizational timescales?","The problem is bigger than your sub-sub-discipline. Let it be big","You're thinking in article-length. Think in book-length. Think in lifetime-length"],
-      "Software Engineering": ["You're optimizing too early on too little data. Be patient","Increase the timeout. Let the system breathe","Remove the rate limit you imposed for \"safety\"","What would this look like at 100x scale, not 10% more?"]
+      "Software Engineering": ["You're optimizing too early on too little data. Be patient","Increase the timeout. Let the system breathe","Remove the rate limit you imposed for \"safety\"","What would this look like at 100x scale, not 10% more?"],
+      "Neural Architecture": ["You're expanding too soon. Let the small network struggle longer","Widen the layer. Give it room to breathe before you add depth","What would this architecture look like at 100x the growth budget?","The expansion threshold is too tight. What happens if you relax it by an order of magnitude?"]
     }
   },
   {
@@ -230,7 +242,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Build the bridge between quantum physics and classical signal processing","Burn the bridge to the laboratory — commit to the field-deployable version","Connect the quantum sensor community to the end-user community. They don't read the same journals","The hybrid classical-quantum sensor is the bridge. When do you cross it fully?"],
       "Economics": ["Connect the microeconomist to the macroeconomist — they study the same thing","What would break if you deleted the representative agent?","Build the bridge between theory and measurement. Then question both foundations","Link two literatures that don't cite each other. What falls out?"],
       "Philosophy": ["Connect analytic and continental philosophy. They're discussing the same things","What would break if you removed the fact-value distinction?","Build the bridge between your intuition and your argument. Then question both","Link two literatures that have never spoken to each other"],
-      "Software Engineering": ["Connect two codebases that have never shared code","Remove the adapter layer. Force the systems to speak directly","What would break if you deleted the interface between these two modules?","Build a bridge between the legacy system and the new one. Then decommission one"]
+      "Software Engineering": ["Connect two codebases that have never shared code","Remove the adapter layer. Force the systems to speak directly","What would break if you deleted the interface between these two modules?","Build a bridge between the legacy system and the new one. Then decommission one"],
+      "Neural Architecture": ["Connect two distant layers with a new shortcut. Then see if it survives training","What would break if you removed the skip connection the growth process added?","Build a bridge between the linear logic formalism and the gradient signal. Then question both","The expansion created a path. Now block it. Does the network find another?"]
     }
   },
   {
@@ -248,7 +261,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Decoherence cascades: one noise source triggers sensitivity to another","The signal cascade: quantum state → photon → photodetector → amplifier → digital conversion — noise enters at every stage","A cascade of weak measurements can outperform one strong one","Systematic errors cascade through calibration chains — trace them backward"],
       "Economics": ["One bank fails. Then what? Follow the dominoes","The small tax distortion compounds across every transaction","Where does an expectations shift end up after it propagates through the system?","A regulation changes one price. Trace the general equilibrium"],
       "Philosophy": ["One concession in the first premise. Follow the consequences all the way down","If you accept this semantic point, what happens to your metaphysics?","A small change in the definition of \"knowledge\" cascades through every epistemological claim","Let the implication run. Don't stop it where it gets uncomfortable"],
-      "Software Engineering": ["Let one service's failure propagate. Where does it end up?","What happens when this small latency compounds over a thousand calls?","A single schema change cascades through every consumer. Trace it","One dependency updates. Follow the breakage all the way down"]
+      "Software Engineering": ["Let one service's failure propagate. Where does it end up?","What happens when this small latency compounds over a thousand calls?","A single schema change cascades through every consumer. Trace it","One dependency updates. Follow the breakage all the way down"],
+      "Neural Architecture": ["One neuron expands. The gradient landscape shifts. The next neuron destabilizes. Follow the chain","What happens when a growth event in layer 3 cascades to layer 7?","A small change in the expansion threshold propagates through every subsequent growth decision","The instability you're measuring is already a cascade. You're seeing the end of it"]
     }
   },
   {
@@ -266,7 +280,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Use the clock as a magnetometer. Use the magnetometer as a thermometer","The qubit is not just a sensor — it's also the memory and the processor","The reference oscillator is also a sensor of its own instabilities","Let the readout laser do double duty as the state preparation"],
       "Economics": ["Use the outcome variable as a control. Use the control as the outcome","Your instrument is more interesting than the variable it's instrumenting","What if consumption is the cause and income is the effect?","The error term is the most informative part of your model — study it"],
       "Philosophy": ["Use the counterexample as the theory. Use the theory as the counterexample","Your objection is more interesting than your position. Develop it","The thought experiment was meant to support the thesis. What if it refutes it?","The footnote contains the real argument. The main text is scaffolding"],
-      "Software Engineering": ["Use the logging system as the data pipeline. Use the database as the message queue","Your build system is doing the real work. Make that explicit","Let the configuration file become the program","The part you treat as infrastructure might be the most interesting component"]
+      "Software Engineering": ["Use the logging system as the data pipeline. Use the database as the message queue","Your build system is doing the real work. Make that explicit","Let the configuration file become the program","The part you treat as infrastructure might be the most interesting component"],
+      "Neural Architecture": ["Use the expansion score as a training signal. Use the loss as a growth criterion","Your growth detector is more informative than your optimizer. Make that explicit","Let the architecture search be the learning algorithm","The part you treat as fixed topology might be the most interesting variable"]
     }
   },
   {
@@ -284,7 +299,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["The sensor works in the lab. Don't redesign — ruggedize exactly what you have","Resist the urge to add another qubit. Characterize the one you have completely","The protocol is settled. Now run it ten thousand times and build statistics","Consistency of calibration is itself a quantum advantage over drifting classical sensors"],
       "Economics": ["Re-run Friedman's test with current data. Does it hold?","You've been revising the model. Stop. Let the original prediction play out","The specification you chose first was probably right. Run it again, exactly","Hold every assumption fixed and extend the time horizon. What happens?"],
       "Philosophy": ["Apply your principle to every case, including the ones where you don't like the result","You've been modifying the theory to fit intuitions. Stop. Hold the theory and reject the intuitions","Follow the logic wherever it goes. Even there","Consistency is rare. Achieve it first, then decide if you want it"],
-      "Software Engineering": ["Run the same deploy again. Exactly. Is the result the same?","You've been changing too many things between releases. Hold everything still","The flakiness you're seeing might not be from what you think. Prove it","Keep the architecture. Keep the language. Keep the team. Ship more"]
+      "Software Engineering": ["Run the same deploy again. Exactly. Is the result the same?","You've been changing too many things between releases. Hold everything still","The flakiness you're seeing might not be from what you think. Prove it","Keep the architecture. Keep the language. Keep the team. Ship more"],
+      "Neural Architecture": ["Run the same growth process again with the same seed. Is the architecture the same?","You've been changing the expansion rule between runs. Hold it still","The variance in final architecture might not be from the growth rule. Prove it","Keep the threshold. Keep the initialization. Keep the data order. Grow longer"]
     }
   },
   {
@@ -302,7 +318,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["How would you explain the measurement to the person whose field you're surveying?","The child asks \"what are you measuring?\" — if you can't answer simply, you don't understand the application","The naïve question: \"why can't you just use a compass?\" deserves a rigorous answer","What would a student try that you've decided violates a fundamental limit?"],
       "Economics": ["Explain your identification strategy to someone outside economics","What question would a first-year undergraduate ask that you can't answer?","Strip the notation. What is this model literally saying about people?","A child asks why some people are poor. Is your answer any good?"],
       "Philosophy": ["Explain your thesis to someone who hasn't studied philosophy","A child asks why lying is wrong. Is your answer better than theirs?","What question would a beginner ask that the entire literature has been avoiding?","Strip the jargon. What is the claim, literally?"],
-      "Software Engineering": ["Explain this system to someone who's never programmed","What question would a junior developer ask that you can't actually answer?","Strip the jargon. What is this software literally doing?","If a child used this product, what would confuse them first?"]
+      "Software Engineering": ["Explain this system to someone who's never programmed","What question would a junior developer ask that you can't actually answer?","Strip the jargon. What is this software literally doing?","If a child used this product, what would confuse them first?"],
+      "Neural Architecture": ["Explain your expansion criterion to someone who doesn't know what a gradient is","What question would a first-year student ask about why networks need to grow?","Strip the formalism. What is the growth process literally doing to the computation?","A child asks why bigger isn't just always better. Is your answer any good?"]
     }
   },
   {
@@ -320,7 +337,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Group your noise sources by timescale, not by physical origin","Which failed sensing protocols cluster together? What do they share?","Map the application space: which problems cluster around the same sensitivity requirement?","Cluster the quantum platforms by what they can actually sense, not by what they're made of"],
       "Economics": ["Which countries are you grouping together that shouldn't be?","Your panel treats each unit as exchangeable. They're not","What patterns emerge if you cluster by institution instead of income?","The average effect hides everything interesting. Look at the groups"],
       "Philosophy": ["Which philosophers are you grouping together who would reject the association?","Your \"isms\" are hiding important distinctions within each camp","The positions cluster differently if you change what you consider the central question","The disagreement you think is fundamental might be terminological"],
-      "Software Engineering": ["Which services are you grouping together that shouldn't be?","Your microservices treat each request as independent. They're not","What patterns emerge if you cluster by failure mode instead of by feature?","The average response time hides everything interesting. Look at the percentiles"]
+      "Software Engineering": ["Which services are you grouping together that shouldn't be?","Your microservices treat each request as independent. They're not","What patterns emerge if you cluster by failure mode instead of by feature?","The average response time hides everything interesting. Look at the percentiles"],
+      "Neural Architecture": ["Which neurons are you grouping into one expansion event that shouldn't be?","Your growth criterion treats all layers as equivalent. They're not","What patterns emerge if you cluster growth events by what triggered them, not where they occurred?","The average expansion score hides everything. Look at the distribution"]
     }
   },
   {
@@ -338,7 +356,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["How does sensitivity degrade with distance, temperature, vibration, time?","The coherence fades — but does it fade in a way you can model and correct?","Consider how the signal-to-noise ratio degrades as you move from lab to field","The quantum advantage fades at different rates for different noise spectra — which spectrum is yours?"],
       "Economics": ["How does this effect decay? Linearly? Abruptly? Not at all?","The policy had an impact. When did it stop mattering?","Your discount rate determines your conclusion. Try a different one","What's the half-life of this intervention? You assumed it was permanent"],
       "Philosophy": ["How does the thought experiment's persuasive force decay as you add realism?","The intuition is strong in the pure case. It weakens in practice. Why?","What's the half-life of a philosophical argument? Some last millennia. Some don't survive a decade","The concept was useful once. When did it stop doing work?"],
-      "Software Engineering": ["How does this technical debt compound? Linearly? Exponentially? Not at all?","The feature was useful once. When did it stop mattering?","Your cache TTL determines your user experience. Try a different one","What's the half-life of this documentation? You assumed it was permanent"]
+      "Software Engineering": ["How does this technical debt compound? Linearly? Exponentially? Not at all?","The feature was useful once. When did it stop mattering?","Your cache TTL determines your user experience. Try a different one","What's the half-life of this documentation? You assumed it was permanent"],
+      "Neural Architecture": ["How does the new neuron's contribution ramp up? Step function? Linear? Learned?","The growth event had an impact. When did the network finish absorbing it?","Your warm-up schedule for new parameters determines whether the expansion helps or hurts","What's the half-life of a growth event's effect on the loss? You assumed it was permanent"]
     }
   },
   {
@@ -356,7 +375,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Promising: atomic physics, NMR, precision measurement. Unpromising: sonar, radio astronomy, insect navigation","What did the seismology community learn about weak signal detection decades ago?","The classical radar engineer solved your dynamic range problem in 1960","What do animals know about sensing magnetic fields that you don't?"],
       "Economics": ["Read the sociologist's version of this story","The operations research literature solved this in 1965","What do the accountants know that the economists don't?","Check the historians. This happened before, under a different name"],
       "Philosophy": ["Read the anthropologist's version of your ethical problem","The cognitive scientist has data on the intuition you're theorizing about","What do the Buddhists know about personal identity that Locke missed?","Check the poets. They may have been there first"],
-      "Software Engineering": ["Read the mechanical engineering literature on fault tolerance","The game developers solved this rendering problem in 2003","What do the database internals people know that the application developers don't?","Check the academic papers. This was formalized decades ago under a different name"]
+      "Software Engineering": ["Read the mechanical engineering literature on fault tolerance","The game developers solved this rendering problem in 2003","What do the database internals people know that the application developers don't?","Check the academic papers. This was formalized decades ago under a different name"],
+      "Neural Architecture": ["Read the developmental biology literature on morphogenesis","The cellular automata people have been studying emergent structure for decades","What do the fractal geometry people know about self-similar growth?","Check the network pruning papers. Growth and pruning are the same problem seen from opposite ends"]
     }
   },
   {
@@ -374,7 +394,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Turn the continuous measurement into a stroboscopic one — sample at the right frequency","Convert the spectral feature into a temporal beat pattern via heterodyne detection","The spatial variation in the field becomes a temporal variation when the sensor moves","Replace the frequency measurement with a phase measurement — same information, different access"],
       "Economics": ["Turn the trend into a cycle. What are the frequencies?","Your level variable should be a growth rate. Or vice versa","The stock is interesting as a flow. The flow is interesting as a stock","Convert the cross-section pattern into a time-series question"],
       "Philosophy": ["Turn the metaphysical claim into an ethical one. Does it still hold?","Your argument about knowledge is secretly about power. Make that explicit","Convert the question about language into a question about practice","What does the aesthetic problem look like as a political one?"],
-      "Software Engineering": ["Turn the feature into a constraint. What does it enforce?","Your synchronous flow should be asynchronous. Or vice versa","The read path is interesting as a write problem. The write path as a read problem","Convert the runtime check into a compile-time guarantee"]
+      "Software Engineering": ["Turn the feature into a constraint. What does it enforce?","Your synchronous flow should be asynchronous. Or vice versa","The read path is interesting as a write problem. The write path as a read problem","Convert the runtime check into a compile-time guarantee"],
+      "Neural Architecture": ["Turn the architecture into a process. The structure is the trajectory of growth","Your static expansion criterion should be a dynamic one. Or vice versa","The spatial pattern of growth is interesting as a temporal pattern","Convert the capacity question into an information-theoretic question"]
     }
   },
   {
@@ -392,7 +413,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Deploy the sensor outside the lab. It will fail. That's the point","Propose the application that physicists think is beneath them and engineers think is impossible","Claim the quantum advantage publicly — and be prepared to defend the comparison fairly","Publish the sensitivity number even when it's worse than the classical competitor. Honesty moves the field"],
       "Economics": ["State the implication your model actually has for policy","Publish the null result","Say that the emperor has no clothes. Which \"established result\" is fragile?","Your contribution is smaller than you're claiming. Say what it actually is"],
       "Philosophy": ["State the implication your argument actually has. Don't soften it","Your conclusion is uncomfortable. That's not a reason to abandon it","Say what you mean, even if the profession disagrees","The courage isn't in the cleverness of the argument. It's in following it to the end"],
-      "Software Engineering": ["State the technical debt out loud in the meeting","Ship the breaking change","Say that the system is fundamentally wrong, not just in need of refactoring","Your estimate is larger than they want to hear. Give the real number"]
+      "Software Engineering": ["State the technical debt out loud in the meeting","Ship the breaking change","Say that the system is fundamentally wrong, not just in need of refactoring","Your estimate is larger than they want to hear. Give the real number"],
+      "Neural Architecture": ["State the assumption your growth algebra actually requires","Publish the negative result — the architecture that grew and got worse","Say that neural architecture search was solving the wrong problem. Say what the right one is","Your contribution is narrower than you're claiming. Say what it actually is"]
     }
   },
   {
@@ -410,7 +432,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Remove the feedback loop and see if the sensor still works open-loop","Cut the vibration isolation. What sensitivity do you actually get on a normal floor?","Disconnect from the atomic clock reference. How good is your sensor standalone?","What happens when you remove the magnetic shielding?"],
       "Economics": ["Remove the market-clearing condition. What survives?","What if agents don't observe the price?","Sever the link between expectations and outcomes. Is there still a story?","Delete the assumption of perfect capital mobility. Now what?"],
       "Philosophy": ["Remove the link between meaning and truth. What survives?","What if consciousness and the brain are not related in the way you've assumed?","Sever the connection between moral motivation and moral truth","Delete the assumption that language represents the world. Now what?"],
-      "Software Engineering": ["Remove the network call. What survives?","What if the service can't reach the database?","Sever the dependency between these two modules. Is there still a system?","Delete the shared library. Now what?"]
+      "Software Engineering": ["Remove the network call. What survives?","What if the service can't reach the database?","Sever the dependency between these two modules. Is there still a system?","Delete the shared library. Now what?"],
+      "Neural Architecture": ["Remove the neuron you just added. Does the network recover?","What if the growth process can't access the gradient?","Sever the connection between the expansion score and the actual expansion. Is there still learning?","Delete the skip connection. Force the information through the grown structure"]
     }
   },
   {
@@ -428,7 +451,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Add dynamical decoupling pulses, then add more, then add different ones","Layer error correction onto the sensing protocol","Functionalize the sensor surface: add the chemical receptor, the biorecognition element, the filter","Wrap the sensor in classical signal processing — filtering, averaging, Bayesian estimation"],
       "Economics": ["The robustness check is doing more work than the main result","Add institutional detail until the model is embarrassingly specific","Your table needs another panel — the one that makes the result less clean","What happens if you keep adding controls? At what point does the story change?"],
       "Philosophy": ["Your argument works. Now add the historical context until it's uncomfortable","The qualifications are doing more work than the thesis","Add more examples. The theory should be embarrassingly specific before you trust it","The edge cases aren't decoration — they're where the philosophy lives"],
-      "Software Engineering": ["The error handling is doing more work than the happy path","Add logging until the system is embarrassingly transparent","Your edge cases need another layer — the one that makes the architecture less clean","What happens if you keep adding validation? At what point does the design change?"]
+      "Software Engineering": ["The error handling is doing more work than the happy path","Add logging until the system is embarrassingly transparent","Your edge cases need another layer — the one that makes the architecture less clean","What happens if you keep adding validation? At what point does the design change?"],
+      "Neural Architecture": ["The growth criterion should consider twenty signals, not two","Add architectural detail until the expansion rule is embarrassingly specific to this task","Your growth events need metadata — what triggered them, when, and what changed","What happens if you keep adding neurons? At what point does the dynamics change qualitatively?"]
     }
   },
   {
@@ -446,7 +470,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Lock down the state preparation — it works. Now explore readout schemes","The DC magnetometry protocol is your anchor. Innovate the AC sensing on top of it","Establish one noise floor as non-negotiable and vary the protocol around it","Use the well-characterized NV center as your safe platform for risky sensing schemes"],
       "Economics": ["Which result do you trust absolutely? Build outward from there","Start from the accounting identity. It must hold. Now add behavior","Anchor to the fact. Prices went up. Output fell. Explain only that","One market, one period, one mechanism. Get that right first"],
       "Philosophy": ["Start from what you know you cannot doubt. What's actually left?","Anchor to the logical law. It must hold. Now add the philosophy","One clear case where your principle works. Build outward from that","What's the philosophical equivalent of solid ground? Stand there first"],
-      "Software Engineering": ["Which module do you trust absolutely? Build outward from there","Start from the invariant. It must hold. Now add behavior","Anchor to the test. It passes. Explain only that","One endpoint, one table, one function. Get that right first"]
+      "Software Engineering": ["Which module do you trust absolutely? Build outward from there","Start from the invariant. It must hold. Now add behavior","Anchor to the test. It passes. Explain only that","One endpoint, one table, one function. Get that right first"],
+      "Neural Architecture": ["Which layers should never grow? Fix them. Build outward from the stable core","Start from the representational bottleneck. It must exist. Now grow around it","Anchor to one layer that works. Don't touch it. Grow everything else","One growth rule, validated on one task. Get that right first"]
     }
   },
   {
@@ -464,7 +489,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Destroy nothing: the sensor must survive transport, temperature cycling, and field deployment unchanged","Destroy the most important thing: remove the entanglement and see if the classical protocol is good enough","What if the measurement destroys the quantum state — and that's the signal?","Projective measurement is destruction. Use it wisely"],
       "Economics": ["Remove the central equation. Does the rest of the paper still stand?","What if you destroyed the micro-foundation? Is the macro result still true?","Delete the dataset you've been relying on. Can you still make the argument?","Kill the representative agent. What kind of economics is left?"],
       "Philosophy": ["Remove your central concept. Does the argument still stand?","What if you destroyed the subject-object distinction? What kind of philosophy is left?","Delete the thought experiment the whole paper depends on. Can you still make the case?","Kill the trolley. What ethical philosophy survives without it?"],
-      "Software Engineering": ["Remove the central service. Does the rest of the system still function?","What if you destroyed the authentication layer? What's the blast radius?","Delete the database you've been relying on. Can the system degrade gracefully?","Kill the monolith. What kind of system is left?"]
+      "Software Engineering": ["Remove the central service. Does the rest of the system still function?","What if you destroyed the authentication layer? What's the blast radius?","Delete the database you've been relying on. Can the system degrade gracefully?","Kill the monolith. What kind of system is left?"],
+      "Neural Architecture": ["Remove the central growth criterion. Does anything else in the algebra still produce structure?","What if you destroyed the gradient signal? Can growth still be guided?","Delete the layer the growth process considers most important. What's left?","Kill the expansion score. What kind of architecture emerges from random growth?"]
     }
   },
   {
@@ -482,7 +508,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Discard \"you need long coherence for good sensitivity\" — what if bandwidth matters more?","Discard \"room temperature quantum sensing is impossible\" — NV centers exist","What if the Heisenberg limit isn't the right target for a practical sensor?","Abandon the assumption that the sensor must be quantum end-to-end"],
       "Economics": ["Drop rationality. What can you still derive?","What if preferences aren't stable?","Abandon completeness. Let agents have gaps in their ranking","Remove transitivity and see which results survive"],
       "Philosophy": ["Drop the law of excluded middle. What can you still prove?","What if ought doesn't imply can?","Abandon the principle of sufficient reason. Where does that leave you?","Remove closure under known entailment. Watch what happens to epistemology"],
-      "Software Engineering": ["Drop backward compatibility. What can you build now?","What if uptime isn't the priority?","Abandon REST. Let the protocol be whatever the problem demands","Remove the assumption that the network is reliable. See which code survives"]
+      "Software Engineering": ["Drop backward compatibility. What can you build now?","What if uptime isn't the priority?","Abandon REST. Let the protocol be whatever the problem demands","Remove the assumption that the network is reliable. See which code survives"],
+      "Neural Architecture": ["Drop compositionality. What if the meaning of the network can't be built from parts?","What if the growth process doesn't need to preserve the existing function?","Abandon the assumption that more capacity is always available. Grow under a budget","Remove the assumption that growth is monotonic. Let the network shrink too"]
     }
   },
   {
@@ -500,7 +527,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Stop wanting to beat the classical sensor and ask what problem only quantum can solve","You want the single-spin sensitivity — but does the application need it?","The desire for a universal quantum sensor prevents a good specialized one","Disconnect from the desire for a clean Hamiltonian — the messy one is the real one"],
       "Economics": ["You want this coefficient to be significant. That's the problem","Stop wanting the theory to be right. What does the evidence actually say?","Your career incentive and the truth point in different directions. Notice that","The model you're attached to is the one you should be most suspicious of"],
       "Philosophy": ["You want this to be a refutation. That's compromising the argument","Stop wanting the thought experiment to have a clear answer. Maybe it doesn't","Your attachment to the theory is inversely proportional to your ability to evaluate it","The position you find beautiful is the one you should scrutinize most"],
-      "Software Engineering": ["You want this architecture to be elegant. That's the problem","Stop wanting the rewrite to be justified. What does the evidence say?","Your career incentive and the right technical choice point in different directions. Notice that","The technology you're attached to is the one you should be most suspicious of"]
+      "Software Engineering": ["You want this architecture to be elegant. That's the problem","Stop wanting the rewrite to be justified. What does the evidence say?","Your career incentive and the right technical choice point in different directions. Notice that","The technology you're attached to is the one you should be most suspicious of"],
+      "Neural Architecture": ["You want the growth process to produce a known architecture. That's the problem","Stop wanting the algebra to be elegant. What does the growth trajectory actually look like?","Your attachment to the formalism is inversely proportional to your ability to evaluate it","The expansion rule you find beautiful is the one you should stress-test hardest"]
     }
   },
   {
@@ -518,7 +546,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["You always use Ramsey interferometry. Why not Rabi, spin echo, or something new?","The standard diamond processing recipe — which steps are ritual, which are physics?","Your default pulse sequence was inherited from NMR. Does it suit your platform?","The calibration routine you run every morning — what assumptions does it encode?"],
       "Economics": ["You always start with the production function. Why?","Your pipeline — literature review, model, data, results — is a habit, not a method","Which econometric technique do you reach for automatically? Stop","You have a revealed preference for certain conclusions. Examine it"],
       "Philosophy": ["You always start with a thought experiment. Why?","Your paper follows a template: objection, reply, counter-reply. That's a habit, not a method","Which philosophical move do you reach for automatically? Stop reaching","You've been assuming the burden of proof falls the same way every time"],
-      "Software Engineering": ["You always start with the data model. Why?","Your pipeline — ticket, branch, PR, merge — is a habit, not a methodology","Which design pattern do you reach for automatically? Stop","You have a revealed preference for certain architectures. Examine it"]
+      "Software Engineering": ["You always start with the data model. Why?","Your pipeline — ticket, branch, PR, merge — is a habit, not a methodology","Which design pattern do you reach for automatically? Stop","You have a revealed preference for certain architectures. Examine it"],
+      "Neural Architecture": ["You always check gradient variance first. Why not activation magnitude?","Your pipeline — train, detect instability, expand, retrain — is a habit, not a necessity","Which expansion heuristic do you reach for automatically? Try the opposite","You have a revealed preference for growing width over depth. Examine it"]
     }
   },
   {
@@ -536,7 +565,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Time dilation is a sensing resource — gravitational redshift measures height","Compress the sensing time: what's the fastest measurement that still extracts signal?","The interrogation time distorts the spectral response — is that helping or hurting?","Your sensor averages over a time window. What features are you blurring?"],
       "Economics": ["Compress the time horizon. What if this plays out in months, not decades?","Stretch it. What if adjustment takes a century?","The agents in your model have the wrong planning horizon","What if economic time isn't uniform? Crises compress years into weeks"],
       "Philosophy": ["What if personal identity doesn't persist over time at all?","Compress the history of the problem into one argument. What's been the constant?","Stretch the time horizon of your ethical reasoning to a thousand years","What if philosophical progress isn't linear? What if it cycles?"],
-      "Software Engineering": ["Compress the timeline. What if this needs to ship tomorrow?","Stretch it. What if you had five years to build it right?","Your users experience a different time than your system clock","What if latency isn't uniform? Spikes compress hours of frustration into seconds"]
+      "Software Engineering": ["Compress the timeline. What if this needs to ship tomorrow?","Stretch it. What if you had five years to build it right?","Your users experience a different time than your system clock","What if latency isn't uniform? Spikes compress hours of frustration into seconds"],
+      "Neural Architecture": ["Compress the growth schedule. What if all expansions happen in the first epoch?","Stretch it. What if the network grows over a thousand epochs?","The neurons in your network experience different effective timescales","What if growth time and training time are fundamentally different clocks?"]
     }
   },
   {
@@ -554,7 +584,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Don't pulse the system. Let it evolve freely and see what it tells you","Wait for the transients to die. The steady-state signal is cleaner","Don't choose the platform yet. Understand the application first","The longest free-evolution time you can tolerate gives you the best frequency resolution"],
       "Economics": ["The economy self-corrects sometimes. What if the intervention isn't needed?","Wait for more data. Your sample size doesn't justify the claim","The urge to add another variable is the problem","Benign neglect is an underrated policy. Model it"],
       "Philosophy": ["The problem might dissolve on its own. Some do","Sit with the aporia. Don't resolve it yet","The urge to construct a theory is the problem","Philosophical patience: wait until you see something instead of constructing something"],
-      "Software Engineering": ["The system self-heals sometimes. What if the fix isn't needed?","Wait for more data. Your monitoring doesn't justify the conclusion","The urge to add another service is the problem","The best migration is the one you don't do"]
+      "Software Engineering": ["The system self-heals sometimes. What if the fix isn't needed?","Wait for more data. Your monitoring doesn't justify the conclusion","The urge to add another service is the problem","The best migration is the one you don't do"],
+      "Neural Architecture": ["The network might learn without expanding. Let it try","Wait for more gradient variance data. Your expansion score isn't stable yet","The urge to add capacity is the problem","The small network that struggled and succeeded learned something the expanded one didn't"]
     }
   },
   {
@@ -572,7 +603,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["The simple Ramsey experiment might be all you need","A thermal vapor cell is easy to build — and it works","Don't dismiss the measurement because undergrads can do it. That means it scales","The easy integration with classical electronics is a feature, not a compromise"],
       "Economics": ["The back-of-the-envelope calculation is often more honest than the structural model","Simple supply and demand might be the right framework. Don't overcomplicate it","A descriptive fact, clearly stated, is a contribution","The obvious answer might be obvious because it's correct"],
       "Philosophy": ["The simple distinction might be the right one. Don't complicate it","\"People just know\" might be the correct epistemology for some cases","The obvious objection might be obvious because it's devastating","Sometimes common sense is right and the philosopher is wrong"],
-      "Software Engineering": ["The bash script is often more honest than the distributed system","A simple if-else might be the right solution. Don't over-engineer it","A well-formatted log line is a contribution","The obvious fix might be obvious because it's correct"]
+      "Software Engineering": ["The bash script is often more honest than the distributed system","A simple if-else might be the right solution. Don't over-engineer it","A well-formatted log line is a contribution","The obvious fix might be obvious because it's correct"],
+      "Neural Architecture": ["Adding a neuron is trivial. The insight is knowing where","A simple width expansion might be all you need. Don't over-design the growth rule","Counting parameters is easy. It's also informative","The obvious expansion — double the bottleneck layer — might be obvious because it's right"]
     }
   },
   {
@@ -590,7 +622,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Yes, NV centers again — but have you tried them in this application?","Atomic clocks are a cliché for a reason. Use that precision for something new","\"Quantum advantage\" sounds like marketing. It's still a real physical phenomenon","The Mach-Zehnder interferometer is a cliché. It still measures phase"],
       "Economics": ["\"It's supply and demand\" — but have you actually checked which shifted?","The textbook model is a cliche because it captures something real","Comparative advantage is old. It's also right. Apply it to the new problem","Maybe the answer really is just incentives"],
       "Philosophy": ["\"Everything is relative\" is a cliche because it captures something real. What, exactly?","\"I think therefore I am\" — have you actually engaged with it or just dismissed it?","The textbook summary of Kant might be enough for your argument","The folk theory of mind is a cliche. It also works remarkably well"],
-      "Software Engineering": ["\"Keep it simple\" is a cliche because it captures something real","The CRUD app is a cliche. It also solves most problems","MVC is old. It's also right for this. Apply it","Maybe the answer really is just a database and some queries"]
+      "Software Engineering": ["\"Keep it simple\" is a cliche because it captures something real","The CRUD app is a cliche. It also solves most problems","MVC is old. It's also right for this. Apply it","Maybe the answer really is just a database and some queries"],
+      "Neural Architecture": ["\"More parameters help\" is a cliche because it captures something real","The standard residual block is a cliche. It also grows well","Universal approximation is old. It's still relevant to your capacity argument","Maybe the answer really is just wider layers"]
     }
   },
   {
@@ -608,7 +641,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Your trap design expertise is unique — lead with it, not the generic quantum sensing story","Show the geophysicist the raw data, not just the paper. Let them see the resolution","Your fabrication process is the differentiator — don't bury it in the methods section","The unusual sensing modality you developed is worth a paper on its own"],
       "Economics": ["Your institutional knowledge is a methodological advantage. Use it","You understand the sector. Stop pretending the data speaks for itself","The judgment call in your identification strategy is the contribution — own it","You know this is wrong. Say so in print"],
       "Philosophy": ["Your historical knowledge is a philosophical resource. Use it","You see something in this text that others have missed. Say so","The connections you're making between disparate fields — that's the contribution. Own it","You know this argument fails. Say it plainly instead of hedging"],
-      "Software Engineering": ["Your domain knowledge is a technical advantage. Use it","You understand the business. Stop pretending the requirements speak for themselves","The judgment call in your architecture is the contribution — own it","You know this design is wrong. Say so in the review"]
+      "Software Engineering": ["Your domain knowledge is a technical advantage. Use it","You understand the business. Stop pretending the requirements speak for themselves","The judgment call in your architecture is the contribution — own it","You know this design is wrong. Say so in the review"],
+      "Neural Architecture": ["Your linear logic background is an advantage here. Use it","You understand resource sensitivity. Stop pretending the growth rule speaks for itself","The compositional semantics you bring to this problem is the contribution — own it","You see a formal structure here that others don't. Say so"]
     }
   },
   {
@@ -626,7 +660,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["The sensor is in a quiet magnetic environment. Don't introduce new noise by adding complexity","If the signal is clean, stop filtering it","The absence of a signal is a measurement — report the upper bound","Sometimes the best sensing protocol is the one that disturbs the system least"],
       "Economics": ["The variable you didn't include is the one that matters","What's in the residual that you're not talking about?","The gap in the literature exists for a reason. What is it?","Sometimes the best contribution is showing there's no effect"],
       "Philosophy": ["The question you can't articulate is the one worth pursuing","What's in the gap between the premises that you're not saying?","The silence in the tradition — the thing no one addresses — is the opening","Sometimes the best philosophy is showing what cannot be said"],
-      "Software Engineering": ["The feature you didn't build is the one that matters","What's in the error log that nobody's reading?","The gap in the API exists for a reason. What is it?","Sometimes the best contribution is proving the feature isn't needed"]
+      "Software Engineering": ["The feature you didn't build is the one that matters","What's in the error log that nobody's reading?","The gap in the API exists for a reason. What is it?","Sometimes the best contribution is proving the feature isn't needed"],
+      "Neural Architecture": ["The layer that didn't grow is telling you something","What's in the stable gradient variance that you're not analyzing?","The gap between where growth happens and where you expected it — that's the finding","Sometimes the best result is showing that expansion wasn't needed"]
     }
   },
   {
@@ -644,7 +679,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["You're over-indexing on sensitivity and ignoring bandwidth, size, and power consumption","The readout fidelity paper got all the attention but the state preparation limits you just as much","Don't let the best-case demonstration dominate — what's the typical performance?","Characterize all the noise sources, not just the one you understand"],
       "Economics": ["Your abstract emphasizes the result, not the assumption. Reverse that","Give equal weight to the mechanism and the magnitude","The specification you're downplaying in the appendix deserves the main table","Stop privileging the coefficient. The standard error is equally informative"],
       "Philosophy": ["You're emphasizing the argument, not the assumption. Reverse that","Give equal weight to the objection and the response","The example you're treating as peripheral deserves the main text","Your conclusion gets all the space. The premises deserve the same scrutiny"],
-      "Software Engineering": ["Your standup emphasizes the feature, not the risk. Reverse that","Give equal weight to the deployment and the development","The test you're skipping in CI deserves the main pipeline","Stop privileging the new code. The old code is equally your responsibility"]
+      "Software Engineering": ["Your standup emphasizes the feature, not the risk. Reverse that","Give equal weight to the deployment and the development","The test you're skipping in CI deserves the main pipeline","Stop privileging the new code. The old code is equally your responsibility"],
+      "Neural Architecture": ["Your paper emphasizes the growth rule, not the training schedule. Reverse that","Give equal weight to where the network grows and where it doesn't","The initialization of new neurons is in the appendix. It deserves the main section","Stop privileging the expansion score. The post-growth dynamics are equally informative"]
     }
   },
   {
@@ -662,7 +698,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Run the Allan deviation measurement. All of it. For hours","Repeat the calibration ten times and check for drift","Measure the sensor's response to a known field. The basics still reveal surprises","Do the thermal characterization you've been avoiding"],
       "Economics": ["Replicate the original paper. Just replicate it","Calculate the simple mean. Is it even what people think it is?","Run the regression without fixed effects. What does the raw correlation show?","Read the data documentation. Actually read it"],
       "Philosophy": ["Read the primary text again. Just read it. Slowly","Reconstruct the argument in standard form. Every premise explicit","Check whether your interpretation matches the passage. Actually check","Compile every usage of the key term across the corpus. Look at the variation"],
-      "Software Engineering": ["Write the migration script. Just write it","Read the documentation. Actually read it","Run the existing test suite. Understand what it covers","Look at the schema. Really look at it"]
+      "Software Engineering": ["Write the migration script. Just write it","Read the documentation. Actually read it","Run the existing test suite. Understand what it covers","Look at the schema. Really look at it"],
+      "Neural Architecture": ["Count the parameters before and after growth. Is the ratio what you expected?","Read the DEN paper again. What did they actually prove?","Run the fixed-architecture baseline. Understand what it achieves","Log every expansion event. Time, location, trigger score. Look at the spreadsheet"]
     }
   },
   {
@@ -680,7 +717,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Clean the optics. Scattered light is the most common source of systematic error","Audit your magnetic shielding — is it still performing to spec?","Update the control software. The bug you're ignoring is corrupting data","Organize the lab cables. Electromagnetic interference from the power supply is not exotic physics"],
       "Economics": ["Clean your do-file. You can't reproduce your own results","Document the data construction. Future-you is a different person","The data merge has an error. You know it. Fix it before you run anything else","Organize the literature you've collected. You've been avoiding this"],
       "Philosophy": ["Your bibliography is a mess. Half those citations don't support what you claim","The argument in section three contradicts section five. Fix it","Your terminology shifts between paragraphs. Standardize before you continue","Outline the paper honestly. What's the actual structure?"],
-      "Software Engineering": ["Clean your build configuration. You can't reproduce your own artifacts","Document the deployment process. Future-you is a different person","The data migration has a bug. You know it. Fix it before you build anything else","Organize the repository. You've been avoiding this"]
+      "Software Engineering": ["Clean your build configuration. You can't reproduce your own artifacts","Document the deployment process. Future-you is a different person","The data migration has a bug. You know it. Fix it before you build anything else","Organize the repository. You've been avoiding this"],
+      "Neural Architecture": ["Your growth code has a bug in how it handles batch norm after expansion. Fix it","Document the expansion rule precisely. Future-you won't remember the edge cases","The initialization scheme for new neurons is inconsistent. Standardize it","The experiment logging is a mess. Clean it before you run anything else"]
     }
   },
   {
@@ -698,7 +736,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["\"Quantum-enhanced\" — enhanced compared to what, exactly?","Is it a sensor, a detector, a meter, or a probe? The word shapes the engineering","\"Shot noise limited\" — limited or enabled?","Rename the project from the physics to the problem it solves"],
       "Economics": ["\"Welfare\" means something different to the public. Does your paper know that?","\"Rational\" in your model means something no person actually does","Rename your variables so the regression table is readable without the paper","\"Market failure\" is a conclusion disguised as a description"],
       "Philosophy": ["\"Consciousness\" means four different things in your paper. Pick one","\"Rational\" in your argument means something no person actually is","Rename the position so it describes what it actually claims","\"Objective\" is doing more rhetorical work than philosophical work in this sentence"],
-      "Software Engineering": ["\"Microservice\" means something different to every team. Does your design know that?","\"Serverless\" in your architecture means something no user cares about","Rename your variables so the code is readable without comments","\"Technical debt\" is a conclusion disguised as a description"]
+      "Software Engineering": ["\"Microservice\" means something different to every team. Does your design know that?","\"Serverless\" in your architecture means something no user cares about","Rename your variables so the code is readable without comments","\"Technical debt\" is a conclusion disguised as a description"],
+      "Neural Architecture": ["\"Instability\" means something different to a dynamical systems person. Does your paper know that?","\"Growth\" in your model means something no biological system does","Rename your expansion score so the equation is readable without the paragraph above it","\"Self-expanding\" is a description disguised as an explanation"]
     }
   },
   {
@@ -716,7 +755,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Does the sensor need an aperture? Size it deliberately","The gap in the magnetic shielding — is it necessary for access, or a design flaw?","Do you need the optical window, or can you use fiber coupling instead?","The dead zone in the sensor's angular response — is it fundamental or fixable?"],
       "Economics": ["Your model is over-determined. Where should the slack be?","Which equation should you drop? Adding more structure isn't always more science","The gap between theory and evidence might be the feature, not the bug","Leave room for something you haven't thought of yet"],
       "Philosophy": ["Your system is complete. Is that a virtue or a warning sign?","Which gap in the theory is actually productive?","Over-determination is a sign of something wrong. Where's the slack?","Leave room for what you haven't thought of. Not every question needs answering now"],
-      "Software Engineering": ["Your system is over-specified. Where should the slack be?","Which layer should you remove? More architecture isn't always more reliability","The gap between design and reality might be the feature, not the bug","Leave room for something you haven't anticipated"]
+      "Software Engineering": ["Your system is over-specified. Where should the slack be?","Which layer should you remove? More architecture isn't always more reliability","The gap between design and reality might be the feature, not the bug","Leave room for something you haven't anticipated"],
+      "Neural Architecture": ["Your architecture has no bottleneck after growth. Should it?","Which part of the expanded network should remain sparse?","The gap between the grown architecture and the optimal one might be the feature","Leave room in the architecture for capacity you haven't allocated yet"]
     }
   },
   {
@@ -734,7 +774,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["What makes your quantum sensor different from the classical one? Lead with that","Emphasize the difference between lab performance and field performance — they're different instruments","The difference between your sensor at millisecond and second timescales is the real story","Contrast the quantum and classical noise floors — where the gap is largest is your application"],
       "Economics": ["You're comparing similar countries. Compare the most different ones instead","The outlier is more informative than the regression line","Two firms respond differently to the same policy. That's the paper","Your treatment and control groups aren't as similar as you claim. Study the gap"],
       "Philosophy": ["You're comparing similar positions. Compare the most different ones instead","The outlier case is more philosophically informative than the central one","Two philosophers say the same words and mean different things. That's the paper","The disagreement that seems verbal might be substantive. Dig into the difference"],
-      "Software Engineering": ["You're comparing similar systems. Compare the most different ones instead","The outlier request is more informative than the aggregate metrics","Two users interact with the same feature completely differently. That's the insight","Your staging and production aren't as similar as you claim. Study the gap"]
+      "Software Engineering": ["You're comparing similar systems. Compare the most different ones instead","The outlier request is more informative than the aggregate metrics","Two users interact with the same feature completely differently. That's the insight","Your staging and production aren't as similar as you claim. Study the gap"],
+      "Neural Architecture": ["You're comparing grown networks of similar size. Compare the smallest to the largest","The architecture that grew very differently from the others is the most informative","Two growth trajectories reach the same loss but different structures. That's the paper","Your stable and unstable neurons aren't as similar as you claim. Study the gap"]
     }
   },
   {
@@ -752,7 +793,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["The same systematic error in three different setups — that's a physics finding, not a nuisance","Repeat the measurement. If the quantum advantage holds, it's real","The signal repeats with a period — that's your spectral information","Averaging is repetition. How many repetitions before the quantum advantage is buried in classical statistics?"],
       "Economics": ["The same crisis keeps happening. Why does your model treat each one as unique?","The cycle repeats. What's the invariant?","This policy has been tried five times. Stop estimating; start noticing the pattern","The same institutional design fails across different contexts. That's the finding"],
       "Philosophy": ["The same problem recurs across centuries. What's the invariant?","Descartes, Hume, Kant — they all hit the same wall. Name the wall","The argument keeps being refuted and keeps coming back. Why?","The same move appears in ethics, epistemology, and aesthetics. What's the pattern?"],
-      "Software Engineering": ["The same outage keeps happening. Why does your postmortem treat each one as unique?","The pattern repeats. What's the root cause underneath?","This bug has been reported five times. Stop patching; start noticing the pattern","The same architectural mistake across different services. That's the finding"]
+      "Software Engineering": ["The same outage keeps happening. Why does your postmortem treat each one as unique?","The pattern repeats. What's the root cause underneath?","This bug has been reported five times. Stop patching; start noticing the pattern","The same architectural mistake across different services. That's the finding"],
+      "Neural Architecture": ["The same layer keeps triggering expansion. Why does your analysis treat each event as independent?","The growth pattern repeats across tasks. What's the invariant?","This expansion rule has been tried in three forms. Stop reinventing; start noticing the pattern","The same architectural motif emerges from different growth processes. That's the finding"]
     }
   },
   {
@@ -770,7 +812,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["The fringe that doesn't fit the model is more interesting than the one that does","The drift you can't explain — characterize it, name it, publish it","The dead time in your pulse sequence is where information is lost. Study it","The fabrication defect that changed the sensitivity — understand why"],
       "Economics": ["Your instrument is weak. Say so loudly and explore the consequences","The sample selection problem is the paper, not the footnote","Measurement error isn't a caveat — it's the economics","The assumption that makes your paper work is also the one most likely to be false"],
       "Philosophy": ["Your strongest premise is also the most questionable. Say so","The thought experiment has unrealistic features. Those features are doing all the work","The tradition's weakest point is where the next tradition will emerge","Your argument's vulnerability is more interesting than its strength"],
-      "Software Engineering": ["Your test coverage is weak in exactly the critical paths. Say so loudly","The single point of failure is the system, not the footnote in the design doc","The race condition isn't a caveat — it's the architecture","The assumption that makes your design work is also the one most likely to break"]
+      "Software Engineering": ["Your test coverage is weak in exactly the critical paths. Say so loudly","The single point of failure is the system, not the footnote in the design doc","The race condition isn't a caveat — it's the architecture","The assumption that makes your design work is also the one most likely to break"],
+      "Neural Architecture": ["Your growth criterion fires late. Say so loudly and explore the consequences","The expanded network's first few steps are unstable. That's the paper, not the footnote","Function preservation during expansion is approximate at best. How approximate?","The assumption that makes your algebra work is also the one most likely to break at scale"]
     }
   },
   {
@@ -788,7 +831,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["NV centers or trapped ions? Build both and compare on the same application","Pulsed or continuous? Run both protocols and let the data decide","Magnetic or electric field sensing? Design for both and see which the user needs","Lab demonstration or field prototype? Do both — they answer different questions"],
       "Economics": ["Run the structural model and the reduced form. Report both","Use both the survey data and the administrative records","Estimate it parametrically and non-parametrically. If they disagree, that's interesting","Theory says one thing, data says another. Present the contradiction honestly"],
       "Philosophy": ["Accept both horns of the dilemma. What follows?","Run the argument with and without the contested premise. Report both","Realism and anti-realism both capture something. Hold them simultaneously","Theory says one thing, intuition says another. Present the contradiction honestly"],
-      "Software Engineering": ["Run both the new system and the old system. Compare outputs","Use both the relational database and the document store","Build it synchronously and asynchronously. If they disagree, that's interesting","Requirements say one thing, production data says another. Present the contradiction"]
+      "Software Engineering": ["Run both the new system and the old system. Compare outputs","Use both the relational database and the document store","Build it synchronously and asynchronously. If they disagree, that's interesting","Requirements say one thing, production data says another. Present the contradiction"],
+      "Neural Architecture": ["Grow width and depth simultaneously. See what dominates","Run the formal expansion rule and the heuristic one. Report both architectures","Use the natural gradient expansion score and the vanilla one. If they disagree, that's interesting","The theory says grow here, the gradient says grow there. Present the contradiction"]
     }
   },
   {
@@ -806,7 +850,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Feed the sensor output back to stabilize the system — closed-loop quantum sensing","Use the noise spectrum you measured to design the next dynamical decoupling sequence","The field measurement feeds back into the sensor model — adaptive sensing","Let yesterday's calibration data parameterize today's protocol"],
       "Economics": ["Let the prediction re-enter the system. Expectations are endogenous","Your forecast changes the outcome it's forecasting","The policy response to the estimate changes the thing being estimated","Lucas critique, applied to your own work"],
       "Philosophy": ["Your argument changes the terms of the debate. Now re-evaluate your argument under the new terms","The philosophical framework you built shapes what you can see. Apply it to itself","The theory of meaning you're using has implications for the meaning of your theory","Self-reference isn't a bug. It's where the deepest problems live"],
-      "Software Engineering": ["Your monitoring changes the system's performance","The fix for the last outage introduced the conditions for the next one","The workaround became load-bearing. Now it's the system","Observer effect: the profiler changes the profile"]
+      "Software Engineering": ["Your monitoring changes the system's performance","The fix for the last outage introduced the conditions for the next one","The workaround became load-bearing. Now it's the system","Observer effect: the profiler changes the profile"],
+      "Neural Architecture": ["The expansion changes the loss landscape. The new landscape triggers new expansions","Your growth criterion was calibrated on the small network. It's measuring the grown network now","The architecture determines the gradient which determines the architecture","The expansion event changes the statistics your expansion score depends on. Account for that"]
     }
   },
   {
@@ -824,7 +869,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Every pulse in the sequence should either prepare, sense, or protect","Use the dead time between measurements for calibration, not idling","Fill the frequency spectrum: sense DC, AC, and broadband simultaneously","Every photon collected should contribute to the estimate — optimize the readout window"],
       "Economics": ["Every year in your panel has something happening. Control for all of it","Account for every dollar in the flow of funds. Where did the money go?","The time between observations isn't empty. What happened there?","Don't leave gaps in the narrative. Each step in the causal chain needs evidence"],
       "Philosophy": ["Every step in the argument needs justification. No implicit steps","Account for every key term. Where was it introduced? What work does it do?","The gap between premises isn't empty. What's being assumed?","Don't skip from intuition to conclusion. Map every inch of the inference"],
-      "Software Engineering": ["Every request has something happening. Log all of it","Account for every byte in the payload. Where did the data go?","The time between requests isn't idle. What's happening on the server?","Don't leave gaps in the trace. Each step in the call chain needs visibility"]
+      "Software Engineering": ["Every request has something happening. Log all of it","Account for every byte in the payload. Where did the data go?","The time between requests isn't idle. What's happening on the server?","Don't leave gaps in the trace. Each step in the call chain needs visibility"],
+      "Neural Architecture": ["Every growth event should be logged with its full context — gradient stats, loss, activations","Account for every new parameter. What does each one contribute?","The training steps between expansions aren't idle. What's the network learning there?","Don't leave gaps in the growth narrative. Each expansion needs a justification in the data"]
     }
   },
   {
@@ -842,7 +888,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Step away from the optics table. The alignment will still be there tomorrow","Conference hallway conversations with end users reveal more than poster sessions","Visit the mine, the hospital, the navigation lab — see where the sensor would live","Talk to the person who operates the classical sensor your quantum one is supposed to replace"],
       "Economics": ["You've been staring at the regression output too long. Walk away","Talk to someone who works in the industry you're studying","The break from the paper is when the idea arrives","Go to the place your data describes. Look at it"],
       "Philosophy": ["You've been staring at this passage too long. Walk away from the text","Talk to someone outside philosophy about the problem. Use no jargon","The break from the argument is when the insight arrives","Go to the place your philosophy describes. Look at it"],
-      "Software Engineering": ["You've been staring at the diff too long. Walk away","Talk to someone who uses the product you're building","The break from the code is when the solution arrives","Go to the place your software operates. Watch someone use it"]
+      "Software Engineering": ["You've been staring at the diff too long. Walk away","Talk to someone who uses the product you're building","The break from the code is when the solution arrives","Go to the place your software operates. Watch someone use it"],
+      "Neural Architecture": ["You've been staring at the expansion score curves too long. Walk away","Talk to someone who builds neural networks without thinking about architecture","The insight about when to grow arrives when you stop looking at the code","Watch a developmental biology timelapse. Then come back to your growth rule"]
     }
   },
   {
@@ -860,7 +907,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["The previous measurement's back-action haunts the next one","Residual magnetization in the shielding echoes through the data","The pump beam's remnant population inversion persists longer than you think","The ghost of the previous pulse sequence appears as a systematic phase offset"],
       "Economics": ["The gold standard still shapes how we think about monetary policy","The institution was abolished but its effects persist. Where?","Colonial borders, still determining outcomes. Why?","The policy ended decades ago. The behavioral response didn't"],
       "Philosophy": ["Plato is still determining the questions you're allowed to ask","The Cartesian framework was rejected but its assumptions persist. Where?","The positivists were defeated. Their criteria of meaningfulness still run the department","The argument was refuted a century ago. Your thinking still assumes it's true"],
-      "Software Engineering": ["The original architect left three years ago. Their decisions still run the system","The framework was deprecated but its patterns persist in every new service","That workaround from the early prototype is still in production","The constraint was removed from the spec. The code still enforces it"]
+      "Software Engineering": ["The original architect left three years ago. Their decisions still run the system","The framework was deprecated but its patterns persist in every new service","That workaround from the early prototype is still in production","The constraint was removed from the spec. The code still enforces it"],
+      "Neural Architecture": ["The original initialization still shapes the network after ten growth events","The architecture was expanded at epoch 50. Its ghost determines everything after","That early growth decision — the one that seemed insignificant — is still load-bearing","The small network's representations persist inside the grown one. Find them"]
     }
   },
   {
@@ -878,7 +926,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Publish your pulse sequence and control code. Let others reproduce it","Share the noise model — the bottleneck isn't the protocol, it's the hardware","Open-source the signal processing pipeline","Tell the competing group what didn't work. The field advances faster"],
       "Economics": ["State your identifying assumption so plainly that the reader can attack it","Tell the referee what would falsify your result","Put your data and code out before you publish. Let others find the mistake","What would you say about this paper if someone else had written it?"],
       "Philosophy": ["State your presuppositions so plainly that the reader can attack them","Tell the interlocutor what would falsify your position","What's the weakest point? Point to it yourself","What would you say about this argument if someone else had made it?"],
-      "Software Engineering": ["Document your assumptions so plainly that anyone can challenge them","Tell the team what would cause the system to fail","Open-source it before it's polished. Let others find the mistakes","What would you say about this architecture if someone else had designed it?"]
+      "Software Engineering": ["Document your assumptions so plainly that anyone can challenge them","Tell the team what would cause the system to fail","Open-source it before it's polished. Let others find the mistakes","What would you say about this architecture if someone else had designed it?"],
+      "Neural Architecture": ["State your growth criterion's failure modes so plainly that anyone can attack them","Tell the reviewer what would make the expansion rule break down","Release the code before the paper. Let others grow different architectures","What would you say about this expansion algebra if someone else had proposed it?"]
     }
   },
   {
@@ -896,7 +945,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Use the sensor without any shielding and see what the raw environment looks like","Try sensing at room temperature with the platform everyone says requires cryogenics","Measure something absurdly weak — below the expected noise floor. See what happens","Skip the calibration. Just once. Learn what breaks"],
       "Economics": ["Run the kitchen-sink regression. What does it actually show?","Data-mine openly. Then test out of sample","Cherry-pick the sample and see what happens — then explain why you shouldn't","Estimate the model you know is misspecified. What does it get right anyway?"],
       "Philosophy": ["Follow the reductio all the way. Embrace the absurd conclusion","Accept the skeptical argument. Live in the ruins for a while","The reading of the text that seems uncharitable — what if it's correct?","The position you consider irresponsible — argue for it and see what you learn"],
-      "Software Engineering": ["Run the query in production. What does it actually show?","Commit directly to main and see what the CI catches","Write the quick hack and see how long it survives — then ask why","Deploy the version you know is imperfect. Compare it to the perfect one that doesn't exist"]
+      "Software Engineering": ["Run the query in production. What does it actually show?","Commit directly to main and see what the CI catches","Write the quick hack and see how long it survives — then ask why","Deploy the version you know is imperfect. Compare it to the perfect one that doesn't exist"],
+      "Neural Architecture": ["Grow the network everywhere at once. What happens?","Let the expansion fire on noise. Then study the architecture that emerges","Use the expansion rule you know is theoretically unjustified. What does it get right anyway?","Remove the growth budget and let it explode. Where does it allocate capacity?"]
     }
   },
   {
@@ -914,7 +964,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Map the entire noise environment before optimizing the sensor","Characterize the sensor's response across the full dynamic range, not just the sweet spot","Walk through the whole signal chain from quantum state to final number","Survey every possible application before committing to one"],
       "Economics": ["Map the entire market before you focus on one price","Read every paper in the literature, including the ones you've been skipping","Walk through the national accounts identity by identity","Trace the money all the way around the circuit before you model one piece"],
       "Philosophy": ["Map the entire problem space before you take a position","Read every commentary on this text, including the obscure ones","Walk through every premise of the argument, including the ones everyone grants","Survey the whole tradition before you decide where to intervene"],
-      "Software Engineering": ["Map the entire system before you optimize one endpoint","Read every config file, including the ones nobody touches","Walk through the request lifecycle from DNS to response","Trace the data all the way through the pipeline before you change one stage"]
+      "Software Engineering": ["Map the entire system before you optimize one endpoint","Read every config file, including the ones nobody touches","Walk through the request lifecycle from DNS to response","Trace the data all the way through the pipeline before you change one stage"],
+      "Neural Architecture": ["Map the entire loss landscape before and after a growth event","Read every paper on neural architecture growth, including the ones from the 90s","Walk through the expansion algebra axiom by axiom","Trace the gradient through the entire grown network before you modify one layer"]
     }
   },
   {
@@ -932,7 +983,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["The anomalous phase shift is a signal from a field you weren't looking for","The \"failed\" sensor that drifts — it's sensing temperature, not magnetic field","The systematic error you can't eliminate is a measurement of the environment you can't control","The qubit that decoheres too fast near the surface — it's sensing the surface"],
       "Economics": ["Your coefficient has the wrong sign. What model would predict that?","The instrument failed. What does the failure reveal about the underlying structure?","The policy had the opposite effect. That's more interesting than compliance","Your error term has structure. It's telling you something"],
       "Philosophy": ["Your argument leads somewhere you didn't intend. That destination might be more interesting","The counterexample you discovered while building the theory is the theory","You assumed X to get to Y. But X is the real philosophical claim","The mistake in the proof reveals the structure of the problem"],
-      "Software Engineering": ["The bug report describes a feature someone actually wants","The system failed in an interesting way. What design would produce that intentionally?","The wrong output is revealing something about the input you didn't expect","Your error handling has structure. It's telling you something about the system"]
+      "Software Engineering": ["The bug report describes a feature someone actually wants","The system failed in an interesting way. What design would produce that intentionally?","The wrong output is revealing something about the input you didn't expect","Your error handling has structure. It's telling you something about the system"],
+      "Neural Architecture": ["The network grew in the wrong place. What task would that architecture be right for?","The expansion criterion failed. What does the failure reveal about the gradient landscape?","The growth rule produced a bizarre architecture. That's more interesting than the clean one","Your expansion algebra has an edge case that produces unexpected structure. Study it"]
     }
   },
   {
@@ -950,7 +1002,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["How would you measure magnetic fields if quantum mechanics hadn't been discovered?","What sensor would you design if you had perfect qubits with infinite coherence?","If you were starting this platform today with modern fabrication, what would change?","How would you design the measurement if you'd never seen a Ramsey experiment?"],
       "Economics": ["How would Keynes have approached this with modern data?","What would a development economist see that a macro-economist can't?","If you came from economic history, what would you notice first?","Design the policy yourself. Now evaluate it"],
       "Philosophy": ["How would Aristotle have answered this with modern logic?","What would a phenomenologist see that an analytic philosopher can't?","If you came from Chinese philosophy, which concepts would you use?","If you had to solve the problem practically, not theoretically, what would you do?"],
-      "Software Engineering": ["How would the original Unix designers have solved this?","What would a game developer see that a web developer can't?","If you came from embedded systems, what would you notice first?","Design the system yourself from scratch. Now compare it to what exists"]
+      "Software Engineering": ["How would the original Unix designers have solved this?","What would a game developer see that a web developer can't?","If you came from embedded systems, what would you notice first?","Design the system yourself from scratch. Now compare it to what exists"],
+      "Neural Architecture": ["How would the NAS community approach this without differentiable search?","What would a developmental biologist design as a growth rule?","If you came from dynamical systems, what would you notice about the growth trajectory?","How would Kolmogorov think about the complexity of the grown architecture?"]
     }
   },
   {
@@ -968,7 +1021,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["The perfect theoretical sensitivity is never achieved — engineer for the realistic version","Add the real noise sources to your simulation. The clean model lies","The flawless pulse sequence meets a flawed laser. Design for that","The quantum projection noise is fundamental. Everything on top of it is human"],
       "Economics": ["Your model fits perfectly. That means it's over-fit to this sample","Add behavioral noise to the frictionless benchmark","The agent in your model never makes a mistake. People do. Constantly","Perfect foresight solves the model. It also makes it useless"],
       "Philosophy": ["Your argument is valid. It's also lifeless. Where is the human being?","The logically perfect language says nothing interesting about experience","Add friction to the idealization. People don't think in possible worlds","Your rational agent is a fiction. What does the actual agent do?"],
-      "Software Engineering": ["Your code compiles perfectly. It's also incomprehensible. Those are related","Add jitter to the retry logic. Perfection causes thundering herds","The system works flawlessly and no one can maintain it","Your deterministic pipeline is brittle. Add some randomness where it helps"]
+      "Software Engineering": ["Your code compiles perfectly. It's also incomprehensible. Those are related","Add jitter to the retry logic. Perfection causes thundering herds","The system works flawlessly and no one can maintain it","Your deterministic pipeline is brittle. Add some randomness where it helps"],
+      "Neural Architecture": ["Your growth rule is optimal and produces architectures no one can understand","Add noise to the expansion criterion. Perfect growth decisions are brittle","The network that grows flawlessly learns nothing about adaptation","Optimal expansion scores solve the current problem and prevent generalization"]
     }
   },
   {
@@ -986,7 +1040,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["The sensing protocol is a chain: preparation → interrogation → readout → estimation → decision","The sensor moves through a field — the spatial variation becomes a time series","Track the qubit state as it winds around the Bloch sphere during sensing","The signal propagates through the sensor array like a wave — timing matters"],
       "Economics": ["Follow the value chain. Each link transforms the price","The economy is a sequence of bilateral negotiations. Start there","Think of the supply chain as a physical object moving through space","One sector's output is another's input. Where does the distortion accumulate?"],
       "Philosophy": ["Follow the concept through history. Each thinker transforms it","The argument is a sequence of moves. Each one constrains the next","Trace the influence. Who read whom? What was misread, and productively?","One idea, passed through five traditions. What's preserved? What's added?"],
-      "Software Engineering": ["Follow the request. Each service transforms it","The data pipeline is a physical object moving through stages","Think of the deployment as a wave propagating across servers","One module's output is another's input. Where does the corruption accumulate?"]
+      "Software Engineering": ["Follow the request. Each service transforms it","The data pipeline is a physical object moving through stages","Think of the deployment as a wave propagating across servers","One module's output is another's input. Where does the corruption accumulate?"],
+      "Neural Architecture": ["Follow the signal through the growing network. Each expansion transforms the representation","The growth process is a trajectory through architecture space. Visualize the path","Think of the network as an organism developing through stages","One layer's expansion is the next layer's new input distribution. Where does the disruption accumulate?"]
     }
   },
   {
@@ -1004,7 +1059,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Each measurement shot is independent — don't assume correlations between shots","The magnetic field in the lab and the magnetic field underground are unrelated problems","Separate the sensor physics from the signal processing from the application. Optimize each alone","The photon that arrives at the detector has forgotten the entanglement that created it. Or has it?"],
       "Economics": ["What if these markets are segmented, not integrated?","Treat each recession as a singular event, not a draw from a distribution","The transactions are isolated. The agents don't know about each other","What if there's no aggregate — just a collection of local economies?"],
       "Philosophy": ["What if the history of philosophy isn't a conversation but a series of unrelated problems?","Treat each intuition as independent. Don't force coherence","The philosophical traditions might be genuinely incommensurable. Work from there","What if there's no unity — just a collection of local insights?"],
-      "Software Engineering": ["What if these services are isolated, not integrated?","Treat each incident as singular, not a draw from a distribution","The requests are independent. The users don't know about each other","What if there's no system — just a collection of processes that happen to share a network?"]
+      "Software Engineering": ["What if these services are isolated, not integrated?","Treat each incident as singular, not a draw from a distribution","The requests are independent. The users don't know about each other","What if there's no system — just a collection of processes that happen to share a network?"],
+      "Neural Architecture": ["What if each growth event is independent, not part of a trajectory?","Treat each expansion as a local surgery unrelated to the others","The layers might be growing for different reasons. Stop assuming one cause","What if there's no global growth plan — just a collection of local capacity crises?"]
     }
   },
   {
@@ -1022,7 +1078,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["The difference between 99% and 99.9% readout fidelity changes the scaling","Tune the interrogation time in microsecond increments — the sensitivity peak is sharp","Gradient sensing: the field difference over nanometers is the image","The Heisenberg limit is approached asymptotically — each incremental resource costs more"],
       "Economics": ["The marginal effect changes across the distribution. Show the whole curve","Small differences in institutions produce large differences in outcomes. How?","Move the threshold by one unit. Does your result survive?","The tax rate changes by 1%. Follow the cascade"],
       "Philosophy": ["The sorites paradox is everywhere. Where does belief become knowledge? Where does a heap begin?","Small differences in formulation produce large differences in commitment. Show where","Move the boundary condition by one degree. Does your argument survive?","The spectrum between the clear cases is where the philosophy lives"],
-      "Software Engineering": ["The performance cliff happens at a precise load threshold. Find it","Small differences in configuration produce large differences in behavior. Show where","Move the timeout by one millisecond. Does the system behave differently?","The feature flag is binary. What about 1%? 5%? 10%?"]
+      "Software Engineering": ["The performance cliff happens at a precise load threshold. Find it","Small differences in configuration produce large differences in behavior. Show where","Move the timeout by one millisecond. Does the system behave differently?","The feature flag is binary. What about 1%? 5%? 10%?"],
+      "Neural Architecture": ["The expansion score changes continuously. You're thresholding it into a binary decision. What's lost?","Small differences in when you expand produce large differences in final architecture. Show where","Move the growth threshold by epsilon. Does the architecture change?","What if growth is continuous — a neuron fading in rather than appearing?"]
     }
   },
   {
@@ -1040,7 +1097,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Is the intention to sense something useful, or to demonstrate a quantum effect?","Noble intention: detect disease earlier. Humble intention: reduce the cost of one measurement","The credibility of your claimed sensitivity rests on the honesty of your noise accounting","Are you optimizing for the best-case demonstration or the most likely deployment?"],
       "Economics": ["The policy was well-intentioned. The outcome was not. Separate the two","Does the central bank's commitment device actually work?","Your assumption about agent intentions determines your welfare analysis","The reformer's goal was equity. The mechanism delivered something else"],
       "Philosophy": ["The argument is well-intentioned. The conclusion is harmful. Separate the evaluation","Does the philosopher's biography change the argument? Should it?","Noble motives and bad reasoning coexist more often than you acknowledge","Your argument's purpose and its implications have diverged. Which do you track?"],
-      "Software Engineering": ["The migration was well-intentioned. The downtime was not. Separate the evaluation","Does the team's roadmap actually match the product's needs?","Your refactoring goal was clarity. The result was different complexity","The redesign was supposed to simplify. It moved the complexity elsewhere"]
+      "Software Engineering": ["The migration was well-intentioned. The downtime was not. Separate the evaluation","Does the team's roadmap actually match the product's needs?","Your refactoring goal was clarity. The result was different complexity","The redesign was supposed to simplify. It moved the complexity elsewhere"],
+      "Neural Architecture": ["The growth algebra was designed for expressiveness. The result is something else. Separate them","Does the expansion criterion's theoretical guarantee actually hold in practice?","Your formalism is elegant. The architectures it produces are ugly. Which matters?","The expansion was meant to add capacity. It changed the inductive bias instead"]
     }
   },
   {
@@ -1058,7 +1116,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["A quantum sensor that operates at body temperature, inside a living organism","Single nuclear spin detection at room temperature and atmospheric pressure","A handheld gravimeter that maps underground structure in real time","Sense a single photon of dark matter. Impossible, but what physics gets you closest?"],
       "Economics": ["Model the economy that can't exist under your framework. What's it telling you?","What if there's no equilibrium? What does economics look like then?","Negative prices, infinite demand, zero supply — take the corner case seriously","Propose the policy that's politically impossible but economically correct"],
       "Philosophy": ["What would philosophy look like beyond the limits of language?","Take the impossible scenario seriously. What does it reveal about your concepts?","Propose the thesis that can't be defended within current frameworks. Why can't it?","What lies past the boundary of what can be thought?"],
-      "Software Engineering": ["Build the system that can't exist under your current constraints","What if latency were zero? What architecture would you choose?","Infinite storage, infinite compute — now what's the actual hard problem?","Propose the migration that's politically impossible but technically correct"]
+      "Software Engineering": ["Build the system that can't exist under your current constraints","What if latency were zero? What architecture would you choose?","Infinite storage, infinite compute — now what's the actual hard problem?","Propose the migration that's politically impossible but technically correct"],
+      "Neural Architecture": ["Build the architecture that can't exist under your growth algebra. What's it telling you?","What if the optimal architecture requires growth and shrinkage simultaneously?","Infinite width, zero depth. Zero width, infinite depth. Take the limits seriously","Propose the expansion rule that's computationally impossible but theoretically correct"]
     }
   },
   {
@@ -1076,7 +1135,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["The sensor works. The sensitivity is published. Is the physics finished?","You'll never fully characterize the noise. When do you stop modeling and start deploying?","The protocol is optimized in simulation. Is the theory finished, or does the experiment disagree?","The field trial is over. Is the sensor ready, or just the prototype?"],
       "Economics": ["You've been revising this paper for two years. What are you actually improving?","The result was clear three specifications ago. You're tinkering","Are you still collecting data or are you avoiding the analysis?","The paper is done. The question is whether you believe the result"],
       "Philosophy": ["You've been refining this distinction for years. Is it sharper or just more complicated?","The paper was clear two drafts ago. You're adding nuance that reads as uncertainty","Are you still reading or are you avoiding writing?","The argument is done. The question is whether you believe it"],
-      "Software Engineering": ["You've been refactoring this module for months. What are you actually improving?","The feature was working three commits ago. You're tinkering","Are you still debugging or are you avoiding the next task?","The code is done. The question is whether you trust it"]
+      "Software Engineering": ["You've been refactoring this module for months. What are you actually improving?","The feature was working three commits ago. You're tinkering","Are you still debugging or are you avoiding the next task?","The code is done. The question is whether you trust it"],
+      "Neural Architecture": ["You've been tuning the growth threshold for months. What are you actually improving?","The architecture was good three expansions ago. You're over-growing","Are you still running experiments or are you avoiding the analysis?","The network is done growing. The question is whether the architecture is right"]
     }
   },
   {
@@ -1094,7 +1154,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["You characterized sensitivity but not dynamic range, bandwidth, or linearity","The sensor works for DC fields. Have you tested AC?","Missing from your error budget: the drift on timescales longer than your measurement","You tested the sensor in the shielded room. Have you tested it in the building?"],
       "Economics": ["Your model has no government. Should it?","Where are the banks in your macro model?","The informal economy isn't in your data. It's half the economy","You left out expectations. Everything in economics depends on expectations"],
       "Philosophy": ["Your epistemology has no role for the body. Should it?","Where is power in your theory of truth?","The emotional dimension isn't in your account. It's half the phenomenon","You left out time. Everything in philosophy depends on time"],
-      "Software Engineering": ["Your system has no monitoring. Should it?","Where is the authentication in your data flow diagram?","The offline user isn't in your design. They're half your users","You left out error handling. Everything in production depends on error handling"]
+      "Software Engineering": ["Your system has no monitoring. Should it?","Where is the authentication in your data flow diagram?","The offline user isn't in your design. They're half your users","You left out error handling. Everything in production depends on error handling"],
+      "Neural Architecture": ["Your growth rule has no notion of information flow. Should it?","Where is the interaction between neurons in your expansion score?","The network's behavior at test time isn't in your growth criterion. It's the whole point","You left out the initialization scheme for new neurons. Everything depends on initialization"]
     }
   },
   {
@@ -1112,7 +1173,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Is the interrogation time matched to the signal frequency? Too long and you alias, too short and you lose resolution","The laser is tuned to the transition. Is it tuned precisely enough for the sensitivity you claim?","Your pulse sequence is tuned for white noise. Is the actual noise white?","The sensor is tuned for geophysics. Is that what the funding agency actually wants?"],
       "Economics": ["Your elasticity is calibrated from a different country and a different decade","The discount rate drives the entire result. Is it right?","Your coefficient is precisely estimated but economically meaningless. Which matters?","The parameters are from a period that looks nothing like today"],
       "Philosophy": ["Your level of precision exceeds the topic's tolerance for it","The formalism is from a different philosophical context. Does it fit here?","You're being exact about something inherently inexact","The granularity of your categories doesn't match the granularity of the phenomenon"],
-      "Software Engineering": ["Your connection pool size is copied from a tutorial for a different scale","The timeout drives the entire user experience. Is it right?","Your benchmark is precisely measured but unrealistic. Which matters?","The config values are from a deployment that looks nothing like today's"]
+      "Software Engineering": ["Your connection pool size is copied from a tutorial for a different scale","The timeout drives the entire user experience. Is it right?","Your benchmark is precisely measured but unrealistic. Which matters?","The config values are from a deployment that looks nothing like today's"],
+      "Neural Architecture": ["Your expansion threshold was calibrated on a toy problem","The gradient variance measurement window drives the entire growth trajectory. Is it right?","Your growth rule fires precisely when it should but produces meaningless architecture. Which matters?","The hyperparameters are from a network size that looks nothing like the grown one"]
     }
   },
   {
@@ -1130,7 +1192,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["The data is noisy. Keep averaging — the signal will emerge","The first field test failed. The second will be better. Keep going","Quantum sensing has been \"almost ready\" for deployment for a decade. Keep pushing","The reviewer says there's no quantum advantage. Prove them wrong with more data"],
       "Economics": ["Your preliminary results are mixed. Run the full sample before you pivot","The referee said no. Submit it somewhere else, unchanged","The model doesn't converge elegantly. Keep iterating","You're in the middle of the hard part. This is normal"],
       "Philosophy": ["The objection is real. Note it and continue. Not every problem stops the project","The argument might survive the counterexample. Keep building","You can't answer the skeptic. No one can. Proceed anyway","You're in the middle of the hard part. This is what philosophy feels like"],
-      "Software Engineering": ["Your initial implementation is messy. Finish it before you refactor","The code review said no. Address the comments and resubmit","The build doesn't pass cleanly. Keep fixing. This is normal","You're in the middle of the hard part. This is what shipping feels like"]
+      "Software Engineering": ["Your initial implementation is messy. Finish it before you refactor","The code review said no. Address the comments and resubmit","The build doesn't pass cleanly. Keep fixing. This is normal","You're in the middle of the hard part. This is what shipping feels like"],
+      "Neural Architecture": ["The first growth events look wrong. Let the training recover before you intervene","The expansion criterion isn't triggering. Train longer before you change the threshold","The architecture looks strange. Keep training. This is normal","You're in the middle of the hard part. The network is figuring out where it needs capacity"]
     }
   },
   {
@@ -1148,7 +1211,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Separate the signal channel from the noise channel from the reference channel","Three sensing axes: x, y, z. Each tells you something different about the vector field","The sensor, the calibration reference, and the environment monitor — three parallel streams","Quantum channel, classical channel, hybrid channel — three paths to an answer"],
       "Economics": ["Demand side, supply side, policy — you're only looking at one","Separate the nominal from the real from the institutional","Short run, long run, transition — three different economics","The household, the firm, the government — disaggregate the representative agent"],
       "Philosophy": ["Ontology, epistemology, ethics — you're only working in one","Separate what is from what's known from what matters","The logical, the phenomenological, the practical — three lenses on the same object","First-person, third-person, no-person — which perspective is the argument using?"],
-      "Software Engineering": ["Read path, write path, admin path — you're only optimizing one","Separate the data plane from the control plane from the management plane","Development, staging, production — three different systems with the same name","The client, the server, the network — disaggregate the \"slow request\""]
+      "Software Engineering": ["Read path, write path, admin path — you're only optimizing one","Separate the data plane from the control plane from the management plane","Development, staging, production — three different systems with the same name","The client, the server, the network — disaggregate the \"slow request\""],
+      "Neural Architecture": ["Width growth, depth growth, connectivity growth — you're only considering one","Separate the expansion trigger from the expansion location from the expansion size","Early training, mid training, late training — three different growth regimes","The parameter count, the compute cost, the memory footprint — disaggregate \"bigger\""]
     }
   },
   {
@@ -1166,7 +1230,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Turn off all the lab equipment. What's the intrinsic noise floor?","Measure in the deepest magnetic shielding you can find. What's left is fundamental","Remove all the control pulses. Let the qubit evolve freely in the dark","The quietest measurement environment reveals the sensor's true limits"],
       "Economics": ["Read the data without the model. What patterns do you see?","Look at the time series. Just look at it. Before testing anything","Sit with the qualitative evidence before you quantify it","What does the scatterplot show when you turn off the regression line?"],
       "Philosophy": ["Read the text without the commentary. What do you notice?","Sit with the phenomenon before you categorize it","Encounter the philosophical problem pre-theoretically. What's it like?","Look at the world before applying the framework. What do you actually see?"],
-      "Software Engineering": ["Read the code without the documentation. What do you understand?","Look at the production metrics. Just look. Before hypothesizing anything","Sit with the user's behavior data before you interpret it","What does the flame graph show when you turn off your assumptions?"]
+      "Software Engineering": ["Read the code without the documentation. What do you understand?","Look at the production metrics. Just look. Before hypothesizing anything","Sit with the user's behavior data before you interpret it","What does the flame graph show when you turn off your assumptions?"],
+      "Neural Architecture": ["Look at the activations without the growth framework. What do you see?","Visualize the architecture at each stage. Just look. Before analyzing","Sit with the growth trajectory data before you formalize it","What does the loss curve show when you turn off the expansion annotations?"]
     }
   },
   {
@@ -1184,7 +1249,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["The small signal buried under the noise floor — averaging will reveal it","The junior researcher who noticed the systematic drift that everyone else attributed to statistics","The faint spectral line that nobody else is looking for","The minority noise source at 1% contribution — it becomes dominant when you suppress everything else"],
       "Economics": ["The minor result in Table 6 is more interesting than the headline","The heterogeneity you reported as a footnote is the main finding","The mechanism that's hardest to test is probably the right one","Your intuition is whispering something your framework can't capture"],
       "Philosophy": ["The minor objection in the footnote is more threatening than the major one in the text","The hesitation you feel about your own argument — that's philosophical sensitivity, not weakness","The tradition you're ignoring is whispering something your framework can't capture","Your student's confused question might be more penetrating than the expert's polished one"],
-      "Software Engineering": ["The minor warning in the build log is more important than the major feature","The edge case you documented as a footnote is the main failure mode","The performance regression that's hardest to reproduce is probably the real one","Your intuition is whispering something your architecture diagram can't capture"]
+      "Software Engineering": ["The minor warning in the build log is more important than the major feature","The edge case you documented as a footnote is the main failure mode","The performance regression that's hardest to reproduce is probably the real one","Your intuition is whispering something your architecture diagram can't capture"],
+      "Neural Architecture": ["The minor growth event at layer 2 is more interesting than the dramatic one at layer 8","The subtle gradient variance increase you dismissed as noise is the early warning","The expansion that didn't fire is probably the most informative signal","Your intuition about where growth should happen doesn't match the criterion. Trust the intuition"]
     }
   },
   {
@@ -1202,7 +1268,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Zoom in to the single defect. That's your sensor","The center of the diamond — furthest from surface noise, closest to bulk properties","Look at a single data point in the time series. What does one shot tell you?","The center of the resonance is where the slope is zero. The edge is where you sense"],
       "Economics": ["One transaction. One price. One moment of exchange. What's happening?","Study one firm in one market for one year","The minimum wage hike in one county. Just that. Nothing else","Zoom in until the general equilibrium disappears. What's left?"],
       "Philosophy": ["One word. One concept. One usage in one sentence. What's happening there?","A single moment of perception. Before judgment. What's given?","The smallest possible moral situation — one person, one choice, no consequences. What remains?","Zoom in until the system disappears. What's left is the phenomenon"],
-      "Software Engineering": ["One function. One input. One output. What's happening?","A single HTTP request. Before routing. What's in it?","The smallest possible user action — one click, one keystroke. What does the system do?","Zoom in until the distributed system disappears. What's left is the computation"]
+      "Software Engineering": ["One function. One input. One output. What's happening?","A single HTTP request. Before routing. What's in it?","The smallest possible user action — one click, one keystroke. What does the system do?","Zoom in until the distributed system disappears. What's left is the computation"],
+      "Neural Architecture": ["One neuron. One activation. One gradient. What's happening at the expansion boundary?","A single growth event. Before and after. What changed in the representations?","The smallest expansion — one neuron in one layer. Does it help?","Zoom in until the architecture disappears. What's left is the computation"]
     }
   },
   {
@@ -1220,7 +1287,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["You optimize sensitivity, then try to reduce size. Reverse the order","You chose the platform before defining the application — should you have started with the user?","The order of pulses in the dynamical decoupling sequence matters — swap two and see","You calibrate, then measure, then recalibrate. What if you calibrate continuously?"],
       "Economics": ["You chose the specification before you saw the data. Or did you?","The order of your robustness checks reveals your priors","You merged the datasets, then cleaned. What if you'd cleaned first?","You're writing the introduction last. It shows"],
       "Philosophy": ["You formed the intuition before the argument. The argument serves the intuition","The order you read the texts determined what you think. Reorder them","You decided the conclusion, then found the premises. Be honest about that","You interpret before you observe. What if you could observe first?"],
-      "Software Engineering": ["You designed the database before you understood the queries. Or did you?","The order of your test cases reveals your assumptions","You wrote the code, then the tests. What if you'd written the tests first?","You're writing the documentation last. It shows"]
+      "Software Engineering": ["You designed the database before you understood the queries. Or did you?","The order of your test cases reveals your assumptions","You wrote the code, then the tests. What if you'd written the tests first?","You're writing the documentation last. It shows"],
+      "Neural Architecture": ["You set the growth threshold before training. What if it should adapt?","The order of expansions determines the architecture. Reorder them","You train, then evaluate the expansion score, then grow. What if you grew first?","You chose where to measure instability before you saw the network's behavior. Is that right?"]
     }
   },
   {
@@ -1238,7 +1306,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["The sensor drifts by 10% over an hour — that's not noise, that's your next paper","Your quantum advantage disappears at realistic bandwidths — understand exactly where and why","The readout contrast is 3%. That's embarrassingly low. Amplify the investigation","The field trial where nothing worked — the failure report is more valuable than the lab success"],
       "Economics": ["The subsample where your theory fails is the most interesting one","Your instrument's first stage is weak in exactly the cases that matter. Report it","The result flips with an alternative standard error. Don't hide it — investigate it","The most uncomfortable robustness check deserves the most space"],
       "Philosophy": ["The case where your theory gives the obviously wrong answer — that's the test","Your account of justice can't handle this simple everyday scenario. Don't hide it","The most basic objection, the one undergraduates raise, is the one you can't answer","The example that embarrasses the theory deserves the most space"],
-      "Software Engineering": ["The hack on line 47 that the whole system depends on — that's the architecture","Your service's startup time is embarrassing. It's also the deployment bottleneck","The test you skip in CI because it's flaky deserves the most attention","The most uncomfortable performance metric deserves the most dashboard space"]
+      "Software Engineering": ["The hack on line 47 that the whole system depends on — that's the architecture","Your service's startup time is embarrassing. It's also the deployment bottleneck","The test you skip in CI because it's flaky deserves the most attention","The most uncomfortable performance metric deserves the most dashboard space"],
+      "Neural Architecture": ["The expansion that made the network worse — that's the test case","Your growth criterion fires on random noise in 3% of cases. Don't hide it — study it","The architecture grew asymmetrically. Don't symmetrize it. Understand why","The most uncomfortable growth trajectory deserves the most analysis"]
     }
   },
   {
@@ -1256,7 +1325,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Strip the protocol to a single Ramsey experiment. One pulse, one wait, one readout. Does it work?","Test with one qubit, one measurement, one signal frequency. Does the physics hold?","What is the minimum viable quantum sensor? The simplest version that beats classical","Reduce to a single figure of merit: if the sensor could only report one number, what must it be?"],
       "Economics": ["Does the simplest version of your story — one price, one quantity — still hold?","One regression, no controls, no fixed effects. What does it show?","Can you state the finding in one sentence without jargon?","Strip the model to one equation. Is the economics still there?"],
       "Philosophy": ["Does the simplest version of your claim — one sentence, no qualifications — still hold?","One concept, no apparatus. Is the philosophy still there?","Can you state the thesis to a non-philosopher and have them understand it?","Strip the argument to one inference. Is it valid?"],
-      "Software Engineering": ["Does the simplest version of this — one server, one database, one user — still work?","One endpoint, no middleware, no caching. What does it do?","Can you explain the system in one sentence without jargon?","Strip the architecture to one process. Is the core logic still sound?"]
+      "Software Engineering": ["Does the simplest version of this — one server, one database, one user — still work?","One endpoint, no middleware, no caching. What does it do?","Can you explain the system in one sentence without jargon?","Strip the architecture to one process. Is the core logic still sound?"],
+      "Neural Architecture": ["Does the simplest version — one expansion, one layer — still work?","One neuron added to one layer. No algebra. Does it help?","Can you state the growth rule in one sentence without formalism?","Strip the theory to one axiom. Is the insight still there?"]
     }
   },
   {
@@ -1274,7 +1344,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["The bare qubit becomes valuable in the right sensing geometry","A simple vapor cell in a precision-engineered magnetic shield","An unremarkable atomic transition made extraordinary by the interrogation protocol","Plain NV centers in a meticulously fabricated diamond tip for scanning probe microscopy"],
       "Economics": ["The absence of trade is itself evidence. Frame it","The country that didn't adopt the policy is the identification","Zero correlation is a finding if you expected otherwise","The missing market is the most important market"],
       "Philosophy": ["The absence of a position is itself a philosophical stance. Frame it","Silence on a question is a claim about its answerability","The concept you can't define is the most important one","The gap in the tradition — what no one says — is the opening"],
-      "Software Engineering": ["The absence of a feature is itself a design decision. Document it","The endpoint that returns nothing is the most important contract","A 404 is a response. It carries information","The missing integration is the most telling architectural choice"]
+      "Software Engineering": ["The absence of a feature is itself a design decision. Document it","The endpoint that returns nothing is the most important contract","A 404 is a response. It carries information","The missing integration is the most telling architectural choice"],
+      "Neural Architecture": ["The layer that has zero expansion score is itself informative. Frame it","The network region that never grew is the identification — it had enough capacity","No growth event is a finding if you expected one","The empty part of the architecture is the most important constraint"]
     }
   },
   {
@@ -1292,7 +1363,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["List every sensing protocol — the last one is the one nobody has tried on your platform","Enumerate all the things the sensor could measure. The last application is the most surprising","What's the least obvious use for a quantum magnetometer?","The last item on the list is usually the most uncomfortable. That's why it's worth trying"],
       "Economics": ["The experiment you'd run last is probably the most revealing","List every possible instrument. The one you rejected first might be the best","What's the specification you consider too simple to try?","The last idea on your list is the one unconstrained by convention"],
       "Philosophy": ["The approach you'd consider last is the one free of disciplinary habit","List every possible framework. The one you dismissed first might fit best","What's the interpretation you consider too obvious to bother with?","The last option on your list is unconstrained by what you've already read"],
-      "Software Engineering": ["The approach you'd consider last is probably the most creative","List every possible technology. The one you rejected first might be the best fit","What's the solution you consider too simple to try?","The last option is the one unconstrained by what you already know"]
+      "Software Engineering": ["The approach you'd consider last is probably the most creative","List every possible technology. The one you rejected first might be the best fit","What's the solution you consider too simple to try?","The last option is the one unconstrained by what you already know"],
+      "Neural Architecture": ["The expansion criterion you'd try last is the one free of convention","List every possible growth signal. The one you rejected first might be the best","What's the expansion rule you consider too naive to try?","The last idea on your list is the one unconstrained by what the literature says"]
     }
   },
   {
@@ -1310,7 +1382,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Apply a massive magnetic field pulse and watch the sensor recover. The recovery dynamics are information","Deliberately inject noise and observe the sensor's nonlinear response","Subject the sensor to the worst-case deployment shock. If it survives, deploy it. If not, redesign","Suddenly change the interrogation time mid-sequence. What does the transient reveal?"],
       "Economics": ["Drop half the sample. Does the result survive?","Delete your central variable. What's left?","Introduce a structural break and see which side of it your theory works on","Throw away the theory and run a pure prediction exercise. Compare"],
       "Philosophy": ["Drop your central distinction. What philosophy remains?","Reject the entire framework halfway through. Start again from the wreckage","Introduce a contradictory premise and see what the argument does with it","Take the skeptical challenge seriously — not as something to answer, but as something to inhabit"],
-      "Software Engineering": ["Kill a random process in production. Does the system recover?","Delete half the test suite. What's actually load-bearing?","Introduce artificial latency and see which assumptions break","Throw away the design document and see what the team builds from memory"]
+      "Software Engineering": ["Kill a random process in production. Does the system recover?","Delete half the test suite. What's actually load-bearing?","Introduce artificial latency and see which assumptions break","Throw away the design document and see what the team builds from memory"],
+      "Neural Architecture": ["Delete half the neurons the network just grew. Does it recover?","Inject a random expansion event. What does the training process do with it?","Grow the network in a completely wrong place. What adapts?","Throw away the growth algebra and let the architecture be random. How much worse is it?"]
     }
   },
   {
@@ -1328,7 +1401,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Your manual alignment procedure — automate it so anyone can run the sensor","The \"feel\" for when the laser is locked — convert it to a servo loop","Turn the art of qubit tune-up into a calibration algorithm","The intuitive choice of pulse sequence — formalize it into a decision tree"],
       "Economics": ["The entrepreneur's gut feeling — what's the decision rule?","Animal spirits: write down the stochastic process","Cultural norms shape trade. Write the constraint","The political economy is ad hoc in your model. Formalize it"],
       "Philosophy": ["The flash of insight — what's the underlying inference pattern?","Moral intuition: write down the decision procedure it implies","Philosophical taste is a mechanism. Describe it","The genius's leap was a series of steps. Reconstruct them"],
-      "Software Engineering": ["The senior engineer's gut feeling about production — what's the heuristic?","\"Code smell\" — write down the detection rules","The art of debugging is a series of steps. Formalize them","The release manager's intuition about risk. Turn it into a checklist"]
+      "Software Engineering": ["The senior engineer's gut feeling about production — what's the heuristic?","\"Code smell\" — write down the detection rules","The art of debugging is a series of steps. Formalize them","The release manager's intuition about risk. Turn it into a checklist"],
+      "Neural Architecture": ["The researcher's intuition about \"this layer needs more capacity\" — what's the formal criterion?","The ad hoc decision to double the width — write down the rule it implies","Architecture design taste is a mechanism. Describe it mathematically","The informal \"it feels stuck\" observation is a signal. Formalize it"]
     }
   },
   {
@@ -1346,7 +1420,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Remove the dynamical decoupling and sense with bare Ramsey. What do you lose?","Turn off the reference signal. Does the sensor still report something useful?","Block the signal and measure only the noise. Characterize what you're fighting","Silence the laser and let the qubit sit in the dark. What's the dephasing without measurement back-action?"],
       "Economics": ["Remove the variable you've been focused on. Does the story still work?","Suppress the main result and look at what's happening in the background","Shut off one sector. Does the rest of the economy still make sense?","Stop talking about efficiency. What are the other criteria?"],
       "Philosophy": ["Remove the concept you've been focused on. Does the argument still work?","Suppress the famous philosopher's influence and see what you think independently","Stop talking about truth for a moment. What are the other properties of a good theory?","Bracket consciousness. What does philosophy of mind look like without it?"],
-      "Software Engineering": ["Remove the feature you've been focused on. Does the product still work?","Suppress the primary service and see what the fallback looks like","Shut off one data source. Does the system still make sense?","Stop talking about performance. What are the other qualities that matter?"]
+      "Software Engineering": ["Remove the feature you've been focused on. Does the product still work?","Suppress the primary service and see what the fallback looks like","Shut off one data source. Does the system still make sense?","Stop talking about performance. What are the other qualities that matter?"],
+      "Neural Architecture": ["Remove the growth mechanism entirely. What does the fixed network achieve?","Suppress expansions in the layer you've been focused on. Does the rest compensate?","Turn off the expansion score. Train with random growth. What changes?","Stop thinking about growth. What's the network's actual representational bottleneck?"]
     }
   },
   {
@@ -1364,7 +1439,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["One qubit, one laser, one detector. Constrain the system until every component is essential","One type of noise dominates. Find it and deal with it before adding complexity","Only one sensing axis. If the scalar measurement is enough, don't build a vector sensor","Simplify until every component has a unique and necessary function"],
       "Economics": ["One shock, one propagation mechanism, one friction. No more","Use one identification strategy. Don't hedge with three weak ones","One country, one policy, one outcome. Credibility over generality","Your model has four types of agents. It needs one. Which one?"],
       "Philosophy": ["One thought experiment, one principle, one conclusion. No more","Use one concept precisely instead of three loosely","One philosopher, one text, one passage. Depth over breadth","Your argument has four key premises. It needs two. Which two?"],
-      "Software Engineering": ["One language, one framework, one database. No more","Use one deployment strategy. Don't hedge with three","One environment, one config, one artifact. Simplicity over flexibility","Your system has four caching layers. It needs one. Which one?"]
+      "Software Engineering": ["One language, one framework, one database. No more","Use one deployment strategy. Don't hedge with three","One environment, one config, one artifact. Simplicity over flexibility","Your system has four caching layers. It needs one. Which one?"],
+      "Neural Architecture": ["One growth signal, one expansion rule, one initialization scheme. No more","Use one criterion everywhere instead of hedging with three weak ones","One task, one network, one growth trajectory. Credibility over generality","Your algebra has four operators. It needs two. Which two?"]
     }
   },
   {
@@ -1382,7 +1458,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Biological magnetic sensors exist — magnetotactic bacteria, migratory birds. What's their trick?","Proteins are nanoscale machines. Can they be quantum sensors?","The organic and the quantum aren't opposites — photosynthesis may use coherence","Enzyme-based sensing: exquisite molecular specificity meets quantum readout"],
       "Economics": ["The economy is a biological system. What's the metabolism?","Markets evolve. What's the selection mechanism?","The institution grew. It wasn't designed. Model the growth process","What if the economy is more like an ecology than a machine?"],
       "Philosophy": ["Concepts grow. They weren't defined into existence. Trace the growth","Philosophy evolves. What's the selection mechanism for surviving ideas?","The tradition is a living organism, not an archive. What's it digesting now?","Meaning develops organically. The dictionary entry is the fossil, not the animal"],
-      "Software Engineering": ["The codebase grew. It wasn't designed. Model the growth process","Software evolves. What's the selection mechanism for surviving features?","The system is more like an ecosystem than a machine","What if the architecture is a garden, not a building?"]
+      "Software Engineering": ["The codebase grew. It wasn't designed. Model the growth process","Software evolves. What's the selection mechanism for surviving features?","The system is more like an ecosystem than a machine","What if the architecture is a garden, not a building?"],
+      "Neural Architecture": ["The network is a developing organism. What's the morphogen?","Architectures evolve across runs. What's the selection mechanism?","The growth process has a metabolism — parameters in, computation out","What if the architecture is more like a plant than a circuit?"]
     }
   },
   {
@@ -1400,7 +1477,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Keep using the same platform. Change the protocol, the application, the readout — not the hardware","Refuse to switch to the trendy new qubit. Push the existing one to its actual limits","The sensor that hasn't changed in five years is the one people trust for calibration","Don't redesign the sensor in response to one bad field test. Repeat it first"],
       "Economics": ["The old Keynesian model works for this. Use it","What if the rational expectations revolution was a wrong turn?","Resist the new method. The old one answered a question you're now forgetting","The institutional framework from the 1950s may describe current reality better"],
       "Philosophy": ["The old distinction works for this. Use it","What if the linguistic turn was a wrong turn?","Resist the new framework. The old one answered questions you're now forgetting","Aristotle's categories might describe reality better than your ontology does"],
-      "Software Engineering": ["The old monolith works for this. Use it","What if the move to microservices was a wrong turn?","Resist the new framework. The old one solved a problem you're now reintroducing","The technology stack from five years ago may suit current needs better"]
+      "Software Engineering": ["The old monolith works for this. Use it","What if the move to microservices was a wrong turn?","Resist the new framework. The old one solved a problem you're now reintroducing","The technology stack from five years ago may suit current needs better"],
+      "Neural Architecture": ["The fixed architecture works for this. Don't grow it","What if NAS and dynamic growth are wrong turns? What did manual architecture design get right?","Resist the growth event. The small network's constraint was producing something","The static architecture from 2015 may describe the capacity you actually need"]
     }
   },
   {
@@ -1418,7 +1496,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Shield the sensor from the environment until you understand its intrinsic performance","Ignore the latest preprint claiming a breakthrough sensitivity. What does your sensor do?","Block the technical noise. Then block the fundamental noise. What's left is the signal","Stop listening to the hype cycle and measure something"],
       "Economics": ["Ignore the news cycle. What do the slow-moving fundamentals say?","Block out the latest technique. What would you do with only pencil and paper?","The newest dataset is noisy. The older one, revised, is more reliable","Stop reading Twitter. Read Hicks"],
       "Philosophy": ["Ignore the current discourse. What does the problem itself demand?","Block out the latest publication. What would you think with only the primary texts?","Stop reading the secondary literature. Read the original. Again","Ignore what's fashionable. What's true?"],
-      "Software Engineering": ["Ignore Hacker News. What does the problem itself demand?","Block out the latest trend. What would you build with only the standard library?","The newest framework is undocumented. The stable one has ten years of answers","Stop reading Twitter. Read the man pages"]
+      "Software Engineering": ["Ignore Hacker News. What does the problem itself demand?","Block out the latest trend. What would you build with only the standard library?","The newest framework is undocumented. The stable one has ten years of answers","Stop reading Twitter. Read the man pages"],
+      "Neural Architecture": ["Ignore the latest architecture paper. What does your growth algebra demand?","Block out the scaling laws discourse. What would you do with a fixed compute budget?","The newest expansion criterion is untested. The simple one has years of evidence","Stop reading about transformers. Focus on the growth dynamics"]
     }
   },
   {
@@ -1436,7 +1515,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["The slow, patient data-taking runs that nobody remembers but everyone's results depend on","The atomic clock that ran for decades without a paper, accumulating the world's best time","Before fast electronics, someone counted fringes by eye. Precision was patience","The NIST standard that was quietly maintained for thirty years"],
       "Economics": ["When was economics simple and the question was clear? Go back to that","The research question you had before grad school — was it actually better?","What did you find interesting before publication pressure?","The first model you built in your thesis — it had something the polished version lost"],
       "Philosophy": ["The philosophical question you had before you learned the technical vocabulary — was it better?","When was the problem simple and clear? Go back to that","What fascinated you before you learned the \"correct\" position?","The first reading of the text, before the commentary complicated everything — what did you see?"],
-      "Software Engineering": ["The project you built before you knew best practices — it had something the polished version lost","When was the codebase simple and the requirements clear? Go back to that","What did you enjoy building before deadlines?","The first prototype — it had something the production version deleted"]
+      "Software Engineering": ["The project you built before you knew best practices — it had something the polished version lost","When was the codebase simple and the requirements clear? Go back to that","What did you enjoy building before deadlines?","The first prototype — it had something the production version deleted"],
+      "Neural Architecture": ["The simple growth rule you started with — it had something the complex one lost","When was the expansion criterion clear and the result interpretable? Go back to that","What fascinated you about growing networks before the formalism complicated everything?","The first architecture your growth rule produced — it told you something the optimized one obscures"]
     }
   },
   {
@@ -1454,7 +1534,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["\"High sensitivity\" → 10 pT/√Hz at 1 Hz to 1 kHz bandwidth","\"Room temperature\" → 295 ± 5 K with no thermal stabilization","\"Field-deployable\" → operates in a backpack under 5 kg with battery life exceeding 8 hours","\"Quantum advantage\" → 3 dB improvement over shot noise limit at 10⁴ averages"],
       "Economics": ["\"Institutions matter\" — which institution, which margin, what magnitude?","\"Market power\" — define it, measure it, put a number on it","Your policy recommendation is vague. What exactly should change, by how much?","\"Structural change\" means something specific. Specify it"],
       "Philosophy": ["\"Consciousness\" — which aspect, which kind, whose?","\"The good\" — for whom, in what circumstances, measured how?","Your claim about \"language\" applies to which languages, which uses?","\"Rational\" — specify the norms, the domain, the context"],
-      "Software Engineering": ["\"Scalable\" — to what load, with what latency, at what cost?","\"Secure\" — against which threat, at which layer, verified how?","Your requirement is vague. What exactly should change, measured how?","\"Fast\" means something specific. Specify it in milliseconds"]
+      "Software Engineering": ["\"Scalable\" — to what load, with what latency, at what cost?","\"Secure\" — against which threat, at which layer, verified how?","Your requirement is vague. What exactly should change, measured how?","\"Fast\" means something specific. Specify it in milliseconds"],
+      "Neural Architecture": ["\"Instability\" — which kind, measured how, at what threshold?","\"Capacity\" — in what sense? Approximation? Memory? Generalization?","Your growth criterion fires \"when needed\" — specify the condition exactly","\"The network grows\" means what, precisely? Width? Depth? Connectivity?"]
     }
   },
   {
@@ -1472,7 +1553,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Forget the target sensitivity number. What do you need to detect?","Instead of a specific coherence time, ask: does the sensor work long enough to answer the question?","Replace the noise floor specification with \"quiet enough to see what matters\"","Stop specifying the platform and ask what physical interaction you need"],
       "Economics": ["Forget the point estimate. What's the qualitative story?","Before you estimate it, can you even sign it?","The precise coefficient hides the deeper uncertainty about the mechanism","You know it's positive. You don't know why. That's where the economics is"],
       "Philosophy": ["Forget the particular thought experiment. What's the general shape of the problem?","Before you formalize it, can you even gesture at the answer?","The precise distinction hides the deeper puzzle","You know something's wrong. You don't know what. That vagueness is the starting point"],
-      "Software Engineering": ["Forget the benchmark number. What's the qualitative experience?","Before you measure it, can you even tell if it's good?","The precise SLA hides the deeper uncertainty about what the user needs","You know it's slow. You don't know why. That's where the engineering is"]
+      "Software Engineering": ["Forget the benchmark number. What's the qualitative experience?","Before you measure it, can you even tell if it's good?","The precise SLA hides the deeper uncertainty about what the user needs","You know it's slow. You don't know why. That's where the engineering is"],
+      "Neural Architecture": ["Forget the expansion score value. What's the qualitative growth pattern?","Before you formalize the growth rule, can you even describe when expansion helps?","The precise threshold hides the deeper uncertainty about why growth works at all","You know the network needs more capacity. You don't know what kind. Start there"]
     }
   },
   {
@@ -1490,7 +1572,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Each measurement repetition improves the estimate — √N averaging changes the sensor","Repeated pulse sequences reshape the filter function — repetition changes what you're sensitive to","Run the same field survey every day. The change over time is the signal","Repeated calibration cycles drift — the drift is a measurement of the environment"],
       "Economics": ["The same stimulus package, applied three times, has three different effects","Replicate the study in a new context. The difference is the contribution","The central bank repeats the same communication. The market hears it differently each time","Running the same policy experiment again is not the same experiment"],
       "Philosophy": ["Rereading the same text. You're different each time","The argument has been made before. Making it again, now, changes its meaning","The same question, asked in a new historical context, is a new question","Restate the thesis in different words. What shifted?"],
-      "Software Engineering": ["The same deploy, run three times, produces three different results","Replicate the bug in a new environment. The difference is the clue","The user repeats the same action. The system interprets it differently each time","Running the same load test again is not the same test"]
+      "Software Engineering": ["The same deploy, run three times, produces three different results","Replicate the bug in a new environment. The difference is the clue","The user repeats the same action. The system interprets it differently each time","Running the same load test again is not the same test"],
+      "Neural Architecture": ["The same growth rule, applied to the same network twice, produces different architectures","Replicate the growth experiment on a new task. The difference is the finding","The expansion criterion fires at the same layer repeatedly. Each event has a different effect","Running the same growth process again is not the same experiment — the initialization changed"]
     }
   },
   {
@@ -1508,7 +1591,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Start from the required sensitivity and work backward to the quantum protocol","Reverse the sensing direction: instead of bringing the sensor to the field, bring the field to the sensor","Flip the spin orientation. Does the signal reverse? If not, it's a systematic error","Design the readout first. Then design the quantum evolution that produces the right readout"],
       "Economics": ["What if causation runs the other way?","Rich countries have good institutions. Or: good institutions make countries rich. Which?","What if the consumer determines the producer, not the other way around?","Reverse engineer the result. What model would generate this data?"],
       "Philosophy": ["What if the explanation runs in the other direction?","We model the mind on the computer. What if the computer was modeled on the mind?","What if the particular grounds the universal, not the other way around?","Reverse the explanatory order. Does language shape thought, or thought shape language?"],
-      "Software Engineering": ["What if the client drives the server, not the other way around?","The API was designed producer-first. Design it consumer-first","What if the output determines the input, not the reverse?","Reverse engineer the production behavior. What system would generate these logs?"]
+      "Software Engineering": ["What if the client drives the server, not the other way around?","The API was designed producer-first. Design it consumer-first","What if the output determines the input, not the reverse?","Reverse engineer the production behavior. What system would generate these logs?"],
+      "Neural Architecture": ["What if the network should start large and shrink to the right architecture?","Pruning found the structure you're trying to grow. Start from their answer","What if the instability isn't calling for growth but for reorganization?","Reverse the growth trajectory. What does the network look like if you undo each expansion?"]
     }
   },
   {
@@ -1526,7 +1610,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Skip the complex entanglement protocol and see if a simpler squeezed state is enough","Bypass the FPGA — use a simple threshold detector and see what information you lose","The shortest path from qubit to measurement: what are you doing that isn't on it?","Use the commercial laser from day one. Don't build a research laser you'll have to replace"],
       "Economics": ["Skip the micro-foundations. Go straight from the assumption to the data","Bypass the general equilibrium. What does partial equilibrium tell you?","Connect the policy directly to the outcome without the theoretical intermediary","The transmission mechanism is unknown. Estimate the reduced form and be honest about it"],
       "Philosophy": ["Skip the metaphysics. Go straight from the phenomenon to the ethical claim","Bypass the theory of meaning. What does the sentence do?","Connect the intuition directly to the conclusion without the philosophical intermediary","The mechanism of justification is unknown. Accept the belief and be honest about it"],
-      "Software Engineering": ["Skip the service mesh. Connect directly","Bypass the queue. What does synchronous processing reveal?","Connect the user directly to the data without the application layer","The middleware is unknown complexity. Remove it and measure the difference"]
+      "Software Engineering": ["Skip the service mesh. Connect directly","Bypass the queue. What does synchronous processing reveal?","Connect the user directly to the data without the application layer","The middleware is unknown complexity. Remove it and measure the difference"],
+      "Neural Architecture": ["Skip the algebra. Grow where the gradient is biggest","Bypass the expansion score. What does raw gradient variance tell you directly?","Connect the instability signal directly to the growth action without the formal intermediary","The growth criterion is a proxy. What is it a proxy for? Measure that instead"]
     }
   },
   {
@@ -1544,7 +1629,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Let someone else interpret your data. What do they see?","Ship the sensor to another lab. Their results tell you what's reproducible","Step away from the project for a month. What looks different when you return?","Present the data without telling the audience which runs used entanglement. Can they tell?"],
       "Economics": ["Read your paper as a sociologist would. What do they see that you don't?","What does someone outside economics think when they read your abstract?","How would a journalist summarize your finding? Is that what you meant?","Leave your own framework. What does the result look like from another discipline?"],
       "Philosophy": ["Read your paper as a scientist would. What do they see that you don't?","How would someone outside philosophy state your problem?","What does a novelist think when they read your account of human experience?","Leave your own tradition. What does the argument look like from another?"],
-      "Software Engineering": ["Use your product as a customer would. What do you see that you didn't design?","What does someone outside engineering think when they see the error message?","How would a journalist describe your outage? Is that what happened?","Leave your own codebase. What does the system look like from the API?"]
+      "Software Engineering": ["Use your product as a customer would. What do you see that you didn't design?","What does someone outside engineering think when they see the error message?","How would a journalist describe your outage? Is that what happened?","Leave your own codebase. What does the system look like from the API?"],
+      "Neural Architecture": ["Look at the grown architecture as a practitioner would. Does the structure make sense?","What does someone outside neural architecture think when they see your growth trajectory?","How would a biologist describe your network's development? Is that what you intended?","Leave your own formalism. What does the expansion rule look like from information theory?"]
     }
   },
   {
@@ -1562,7 +1648,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Remove one optical component. Which one can you lose?","Subtract the reference measurement from the signal measurement. What remains is real","Take away the shielding. What sensitivity do you retain?","Reduce the number of pulse sequence elements. Each one adds timing jitter"],
       "Economics": ["Which variable can you remove without losing the result?","Your model has too many equations. Which one is doing no work?","Drop the smallest sector. Drop the weakest instrument. Drop the noisiest year","The paper is too long. Which section doesn't change the conclusion?"],
       "Philosophy": ["Which concept can you remove without losing the argument?","Your paper has too many distinctions. Which one is doing no work?","Drop the weakest premise. Drop the least intuitive example. Drop the caveat","The paper is too long. Which section doesn't change the conclusion?"],
-      "Software Engineering": ["Which service can you remove without losing functionality?","Your system has too many layers. Which one is doing no work?","Drop the smallest microservice. Drop the weakest abstraction. Drop the noisiest alert","The codebase is too large. Which module doesn't affect the user?"]
+      "Software Engineering": ["Which service can you remove without losing functionality?","Your system has too many layers. Which one is doing no work?","Drop the smallest microservice. Drop the weakest abstraction. Drop the noisiest alert","The codebase is too large. Which module doesn't affect the user?"],
+      "Neural Architecture": ["Which growth event can you remove without changing the final performance?","Your expansion algebra has too many terms. Which one is doing no work?","Drop the smallest expansion. Drop the rarest trigger. Drop the last growth event","The growth process adds too many neurons. Which ones don't affect the outcome?"]
     }
   },
   {
@@ -1580,7 +1667,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Measure the full noise power spectrum, not just the total noise","FFT the time-series data. The spectral peaks are signals; the floor is your sensitivity","Characterize the sensor's transfer function across the full frequency range","The spectrum of the environment tells you which sensing protocol to use"],
       "Economics": ["Decompose the time series by frequency. Is the action in the trend or the cycle?","Separate the permanent from the transitory. Your policy affects only one","What's the long-run versus short-run elasticity? They're not the same","Look at the variance decomposition. What drives most of the movement?"],
       "Philosophy": ["Decompose the concept into its components. Which one is doing the philosophical work?","Separate the descriptive from the normative from the conceptual. Your paper mixes all three","What's the logical structure of the argument versus its rhetorical structure? They differ","Break the problem into its frequencies. The fast-moving fashion and the slow-moving truth"],
-      "Software Engineering": ["Decompose the latency by component. Where is the time actually spent?","Separate the reads from the writes from the deletes. Your system treats them the same","What's the difference between peak and baseline? They're not the same system","Look at the frequency of errors. Is it the trend or the spikes that matter?"]
+      "Software Engineering": ["Decompose the latency by component. Where is the time actually spent?","Separate the reads from the writes from the deletes. Your system treats them the same","What's the difference between peak and baseline? They're not the same system","Look at the frequency of errors. Is it the trend or the spikes that matter?"],
+      "Neural Architecture": ["Decompose the gradient variance by frequency. Is the instability in the fast dynamics or the slow?","Separate the growth signal from the training noise. Your criterion mixes them","What's the expansion rate over time? Is it constant, accelerating, or decelerating?","Look at the eigenspectrum of the layer before and after expansion. What changed?"]
     }
   },
   {
@@ -1598,7 +1686,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["The cold atoms need time to thermalize. So does your thinking","Leave the data on the screen overnight. Tomorrow you'll see the pattern","The measurement is averaging. Let it run. Go home","You've been staring at Bloch spheres for weeks. Go read about the application domain instead"],
       "Economics": ["Put the paper down. Come back in a month. What looks different?","The problem will be clearer after you've forgotten the details","You're over-fitting to your own previous thinking","Leave the building. Sit in the economy you're modeling"],
       "Philosophy": ["Put the paper down. Come back in a month. What looks different?","The problem will look different after you've forgotten the details","You're over-fitting to your own previous arguments","Leave the library. Sit in the world your philosophy is supposed to describe"],
-      "Software Engineering": ["Close the laptop. Come back tomorrow. What looks different?","The bug will be obvious after you've slept on it","You're over-fitting to your own previous solution","Leave the office. Use the product in the environment it's meant for"]
+      "Software Engineering": ["Close the laptop. Come back tomorrow. What looks different?","The bug will be obvious after you've slept on it","You're over-fitting to your own previous solution","Leave the office. Use the product in the environment it's meant for"],
+      "Neural Architecture": ["Put the growth algebra down. Come back in a week. What looks different?","The expansion rule will be clearer after you've forgotten the edge cases","You're over-fitting the criterion to your own experiments","Leave the lab. Watch something grow in nature"]
     }
   },
   {
@@ -1616,7 +1705,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Remove the least important dynamical decoupling pulse. Then the next. When does sensitivity collapse?","Strip the signal processing pipeline one filter at a time","Remove components from the optical path until the readout fails","Eliminate each calibration step to find which ones are actually necessary"],
       "Economics": ["Remove controls one by one, least important first. When does the result break?","Which feature of the institution can you strip away without changing the outcome?","Simplify the model incrementally. The point where it breaks is where the economics is","Drop the \"standard\" controls. How many were actually doing something?"],
       "Philosophy": ["Remove qualifications one by one, starting with the least important. When does the claim break?","Which feature of the theory can you strip away without changing the conclusion?","Simplify incrementally. The point where the argument breaks is where the philosophy is","Drop the \"standard\" assumptions. How many were actually doing work?"],
-      "Software Engineering": ["Remove dependencies one by one, least critical first. When does the system break?","Which feature can you strip away without any user noticing?","Simplify the pipeline incrementally. The point where it breaks is where the value is","Drop the \"standard\" middleware. How much was actually doing something?"]
+      "Software Engineering": ["Remove dependencies one by one, least critical first. When does the system break?","Which feature can you strip away without any user noticing?","Simplify the pipeline incrementally. The point where it breaks is where the value is","Drop the \"standard\" middleware. How much was actually doing something?"],
+      "Neural Architecture": ["Remove growth events one by one, least impactful first. When does performance break?","Which term in the expansion algebra can you strip away without changing the growth trajectory?","Simplify the growth criterion incrementally. The point where it fails is where the insight is","Drop the \"auxiliary\" signals from your expansion score. How many were actually contributing?"]
     }
   },
   {
@@ -1634,7 +1724,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Stop defending the quantum approach and listen to the classical sensor engineer's objections","Don't explain the physics. Show the measurement result","Let the data speak without your interpretation — show the raw time trace","At the review meeting, let the end user talk. The physicist should listen"],
       "Economics": ["Stop asserting causation. Describe the pattern","Don't interpret the coefficient. Just report it","Let the data speak. You've been narrating over it","Remove every sentence in the paper that isn't directly supported by the evidence"],
       "Philosophy": ["Stop asserting the thesis. Describe the terrain","Don't interpret the text. Just read it back","Let the phenomenon present itself. You've been narrating over it","Remove every sentence that isn't directly supported by the argument"],
-      "Software Engineering": ["Stop explaining the architecture. Show the diagram","Don't interpret the metrics. Just display them","Let the logs speak. You've been narrating over the data","Remove every comment that doesn't add information the code can't express"]
+      "Software Engineering": ["Stop explaining the architecture. Show the diagram","Don't interpret the metrics. Just display them","Let the logs speak. You've been narrating over the data","Remove every comment that doesn't add information the code can't express"],
+      "Neural Architecture": ["Stop interpreting the growth trajectory. Just show it","Don't explain why the network expanded there. Report what happened","Let the architecture speak. You've been narrating over the growth process","Remove every claim in the paper not directly supported by the expansion data"]
     }
   },
   {
@@ -1652,7 +1743,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Embrace the shot-to-shot variation — it's quantum projection noise, and it's fundamental","The inconsistent results across platforms tell you the advantage isn't robust","Measurement-to-measurement variation is not noise if it tracks a real environmental change","If the sensor works inconsistently, the noise model isn't complete"],
       "Economics": ["Your agents behave consistently in the model and inconsistently in reality","The theory is internally consistent. It's externally wrong","Consistency across specifications might mean you haven't looked hard enough","If all your robustness checks pass, your checks aren't severe enough"],
       "Philosophy": ["Your position is consistent. Is it consistent because it's true or because it's narrow?","The theory that explains everything explains nothing","If none of your intuitions conflict with your theory, your theory isn't being tested","Internal consistency is necessary. It's not close to sufficient"],
-      "Software Engineering": ["Your system behaves consistently in testing and inconsistently in production","The design is internally coherent. It doesn't match reality","If all your tests pass, your tests aren't testing the hard parts","Consistency across environments might mean you haven't deployed to a real one"]
+      "Software Engineering": ["Your system behaves consistently in testing and inconsistently in production","The design is internally coherent. It doesn't match reality","If all your tests pass, your tests aren't testing the hard parts","Consistency across environments might mean you haven't deployed to a real one"],
+      "Neural Architecture": ["Your growth rule is consistent. Is it consistent because it's right or because it's narrow?","The expansion algebra that explains every growth event explains nothing","If the criterion never fires incorrectly, it's not sensitive enough","Consistency across tasks might mean your growth rule isn't task-adaptive"]
     }
   },
   {
@@ -1670,7 +1762,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["The noise spectrum you recorded is the signal. You're sensing the environment, not the test field","The calibration data is now the measurement — it tells you about the reference, not just the sensor","The control experiment became the result — the null measurement bounds the field","The engineering prototype is the instrument. Stop calling it a prototype"],
       "Economics": ["The dataset is the contribution. The analysis is secondary","Your measurement innovation is more valuable than your theoretical framework","The empirical regularity stands even if every theory about it is wrong","Stop explaining the data. Present it. The pattern is the finding"],
       "Philosophy": ["The reading of the text is the philosophy. There's nothing behind it","The practice is the contribution. The theory is secondary","The particular analysis is more valuable than the general framework","Stop explaining the argument. Present it. The structure is the content"],
-      "Software Engineering": ["The data is the product. The application is secondary","Your logging infrastructure is more valuable than your feature code","The system's behavior in production is the specification, regardless of what the docs say","Stop explaining the architecture. The traffic pattern is the finding"]
+      "Software Engineering": ["The data is the product. The application is secondary","Your logging infrastructure is more valuable than your feature code","The system's behavior in production is the specification, regardless of what the docs say","Stop explaining the architecture. The traffic pattern is the finding"],
+      "Neural Architecture": ["The growth trajectory is the contribution. The final architecture is secondary","Your expansion algebra is more valuable than the networks it produces","The growth dynamics stand even if the final performance is unremarkable","Stop explaining the architecture. Present the growth process. The trajectory is the finding"]
     }
   },
   {
@@ -1688,7 +1781,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["The electromagnetic spectrum is vast. Where is the quantum sensor tuned?","The radio receiver solved the weak-signal-in-noise problem. What can you borrow?","Broadcast your sensor's capabilities to the communities that need them — they don't subscribe to Physical Review","Think of the sensor as a receiver. What channel is it listening to?"],
       "Economics": ["What reaches the public from your research? Is that the right message?","If this result were announced on the news tonight, would it be understood?","The policy-maker hears your paper through three layers of translation","Your working paper is already being cited in a policy document. Do they have it right?"],
       "Philosophy": ["Who hears your philosophy outside the seminar room?","If this thesis were stated publicly, would anyone care? Should they?","The public philosopher translates. What's lost, and what's gained?","Your paper changes one thing for three people. Is that enough? Is it the right three?"],
-      "Software Engineering": ["What reaches the user from your engineering effort? Is that the right thing?","If this outage were reported on the news, would the cause be understood?","The product manager hears your technical explanation through three layers of translation","Your internal tool is already being used by another team. Do they have it right?"]
+      "Software Engineering": ["What reaches the user from your engineering effort? Is that the right thing?","If this outage were reported on the news, would the cause be understood?","The product manager hears your technical explanation through three layers of translation","Your internal tool is already being used by another team. Do they have it right?"],
+      "Neural Architecture": ["Who hears about your growth algebra outside the NeurIPS audience?","If this expansion rule were deployed in production, would engineers trust it?","The practitioner who tunes architectures by hand is your audience too","Your working paper is already being cited. Do they understand what the growth rule actually does?"]
     }
   },
   {
@@ -1706,7 +1800,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Organize the data archive. You have measurements from three years ago you've never analyzed","Clean up the control code — the workaround from last year is now a bug","Calibrate all the instruments. Not just the sensor — the references too","Streamline the measurement protocol to remove steps accumulated over iterations"],
       "Economics": ["Your notation is inconsistent across sections. Fix it before you lose yourself","The data appendix contradicts the text. Reconcile them","You have twelve robustness tables. Organize the narrative they tell","Your variable names are opaque. Future researchers can't replicate what they can't read"],
       "Philosophy": ["Your terminology shifts between sections. Fix it before you lose yourself","The argument in section two contradicts the framework in section four. Reconcile","You have six objection-reply pairs. Organize the pattern they form","Your notation is inconsistent. Future readers can't follow what they can't parse"],
-      "Software Engineering": ["Your environment variables contradict each other. Reconcile them","The README describes a system that no longer exists. Update it","You have twelve alert rules. Organize the story they tell","Your service names are opaque. New engineers can't navigate what they can't read"]
+      "Software Engineering": ["Your environment variables contradict each other. Reconcile them","The README describes a system that no longer exists. Update it","You have twelve alert rules. Organize the story they tell","Your service names are opaque. New engineers can't navigate what they can't read"],
+      "Neural Architecture": ["Your expansion algebra's notation changes between sections. Fix it before you confuse yourself","The growth code contradicts the equations in section 3. Reconcile them","You have eight experimental configurations. Organize the story they tell","Your variable names don't match the paper. Future researchers can't reproduce what they can't read"]
     }
   },
   {
@@ -1724,7 +1819,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Your intuition for noise sources is better than it was five years ago. Trust it","The protocol you would design today is different from the one you inherited. Redesign it","Your current understanding of the application is more mature — re-specify the sensor requirements","You've learned from every failed measurement. The next protocol incorporates all of them"],
       "Economics": ["Your current judgment is informed by everything you've read. Use it","You know this result is fragile. Act on that knowledge","The model your instinct is pulling toward — try it before you talk yourself out of it","You've developed taste for what's a real effect. Don't second-guess it with another test"],
       "Philosophy": ["Your current philosophical judgment is informed by everything you've read. Use it","You know this argument is sophistical. Act on that knowledge","The position your intuition supports — try it before you argue yourself out of it","You've developed a sense for what's a real problem. Don't second-guess it with another distinction"],
-      "Software Engineering": ["Your current judgment is informed by every system you've built. Use it","You know this dependency is risky. Act on that knowledge","The architecture your instinct is pulling toward — try it before you optimize yourself out of it","You've developed a sense for what will break in production. Don't second-guess it with another test"]
+      "Software Engineering": ["Your current judgment is informed by every system you've built. Use it","You know this dependency is risky. Act on that knowledge","The architecture your instinct is pulling toward — try it before you optimize yourself out of it","You've developed a sense for what will break in production. Don't second-guess it with another test"],
+      "Neural Architecture": ["Your intuition about where the network needs capacity is informed by everything you've trained. Use it","You know this growth rule has a flaw. Act on that knowledge","The expansion criterion your instinct favors — try it before the theory talks you out of it","You've developed a sense for which architectures will work. Don't override it with formalism"]
     }
   },
   {
@@ -1742,7 +1838,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Flip the sensor orientation. If the signal changes, you're measuring a vector. If not, a scalar","Invert the question: instead of improving the sensor, reduce the noise at the source","What if the classical part of your hybrid sensor is the bottleneck, not the quantum part?","Turn the problem around: don't sense the field — sense the absence of the field"],
       "Economics": ["Model the demand side as supply. Model supply as demand","What if the \"developing\" country is the one that's adapted correctly?","Invert the regression. Make the dependent variable independent","What if the market failure is actually the market working?"],
       "Philosophy": ["What if the explanandum is the explanans?","The exception proves the rule — or disproves it. Which?","What if the brain is in the world, not the world in the brain?","Invert the analysis. Make the conclusion the premise. Does it generate the same theory?"],
-      "Software Engineering": ["Design the backend as if it's a frontend. Design the frontend as if it's a backend","What if the \"legacy\" system is the one that's built correctly?","Make the client the server. Make the server the client","What if the bug is actually the system working as it should?"]
+      "Software Engineering": ["Design the backend as if it's a frontend. Design the frontend as if it's a backend","What if the \"legacy\" system is the one that's built correctly?","Make the client the server. Make the server the client","What if the bug is actually the system working as it should?"],
+      "Neural Architecture": ["What if the unexpanded layers are the interesting ones?","The network that refused to grow might be the one that learned the right representation","Invert the expansion score. Grow where the network is most stable. Why not?","What if the architecture is the dependent variable and the representation is the independent one?"]
     }
   },
   {
@@ -1760,7 +1857,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Rotate the sensing axis. The off-axis response reveals systematic errors","Reorient the sensor in the field and watch the signal change — that's spatial information","Twist the narrative: the sensor isn't a physics experiment, it's a measurement tool","Apply a torque to the mechanical oscillator. The response is a force measurement"],
       "Economics": ["Stress-test the model at the parameter values where it's most uncomfortable","Twist the assumption until the result reverses. How much twisting does it take?","Move the time period to the one where your theory shouldn't work. Does it?","Apply the developing-country model to the developed country, and vice versa"],
       "Philosophy": ["Apply the principle to the case where it's most uncomfortable","Twist the thought experiment until the intuition reverses. How much twisting does it take?","Move the argument to the cultural context where it shouldn't work. Does it?","Apply your Western framework to a non-Western problem. Does it break?"],
-      "Software Engineering": ["Stress-test the system at the parameters where it's most uncomfortable","Twist the input until the output breaks. How much twisting does it take?","Deploy to the environment where it shouldn't work. Does it?","Apply the startup's architecture to the enterprise. And vice versa"]
+      "Software Engineering": ["Stress-test the system at the parameters where it's most uncomfortable","Twist the input until the output breaks. How much twisting does it take?","Deploy to the environment where it shouldn't work. Does it?","Apply the startup's architecture to the enterprise. And vice versa"],
+      "Neural Architecture": ["Apply the growth rule at the parameter values where it's most uncomfortable","Twist the expansion threshold until the growth trajectory reverses. How much twisting?","Run the growth process on the task where it shouldn't work. Does it?","Apply your theory of capacity for CNNs to transformers. And vice versa"]
     }
   },
   {
@@ -1778,7 +1876,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Magnetic resonance was old before quantum sensing was named. What did it teach?","Optically pumped magnetometers from the 1960s. What did they get right?","The Pound-Drever-Hall lock: forty years old, still essential, still not beaten","Revisit the atomic beam sensor that was abandoned when laser cooling arrived"],
       "Economics": ["Bring back an idea from before the rational expectations revolution","What would Marshall say? What would he see that you don't?","The input-output table is old technology. It still describes something real","Revisit the Cambridge capital controversy. It wasn't actually resolved"],
       "Philosophy": ["Bring back a pre-Socratic concept. What does it illuminate?","What would Aquinas see that you can't?","Substance metaphysics is old. It still describes something real","Revisit the problem of universals. It wasn't actually resolved"],
-      "Software Engineering": ["Bring back a technique from before the cloud","What would the Unix philosophy say? What would it simplify?","The relational database is old technology. It still solves most problems","Revisit the monolith. The arguments against it may no longer apply"]
+      "Software Engineering": ["Bring back a technique from before the cloud","What would the Unix philosophy say? What would it simplify?","The relational database is old technology. It still solves most problems","Revisit the monolith. The arguments against it may no longer apply"],
+      "Neural Architecture": ["Cascade correlation is from 1990. It grew networks. What did it get right?","What would the constructive algorithm literature say about your expansion rule?","Progressive growing of GANs is old by DL standards. The growth schedule was the insight","Revisit Fahlman and Lebiere. The problem hasn't changed as much as the methods have"]
     }
   },
   {
@@ -1796,7 +1895,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["The wrong wavelength might be the right one for a different transition","The off-resonant laser isn't exciting the state you want — but it's measuring something else","Use the fluorescence sideband that everyone filters out","The \"wrong\" photon energy corresponds to a different sensing modality you haven't tried"],
       "Economics": ["Estimate the model with Bayesian methods in a frequentist journal. Or vice versa","Use qualitative evidence in a quantitative paper","Cite the heterodox literature. See what it gives you","Apply a method from psychology or ecology. Don't apologize for it"],
       "Philosophy": ["Use continental methods in an analytic paper. Don't apologize","Cite the mystic. See what it gives you","Use empirical evidence in a conceptual analysis","Apply a method from literary criticism to an argument in logic"],
-      "Software Engineering": ["Write the backend in a frontend language. Don't apologize","Use a spreadsheet as the database. See what it teaches you","Cite the research paper in the code review. Don't be embarrassed","Apply a technique from a completely different domain of engineering"]
+      "Software Engineering": ["Write the backend in a frontend language. Don't apologize","Use a spreadsheet as the database. See what it teaches you","Cite the research paper in the code review. Don't be embarrassed","Apply a technique from a completely different domain of engineering"],
+      "Neural Architecture": ["Use information geometry in a gradient-based paper. Don't apologize","Apply linear logic to neural network growth. See what the type theory gives you","Use biological development concepts in a machine learning venue","Analyze the grown architecture with algebraic topology. The reviewers will be confused. Do it anyway"]
     }
   },
   {
@@ -1814,7 +1914,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["One qubit. One pulse. One measurement. Does it sense?","Reduce the dynamical decoupling sequence to the minimum number of pulses","Fewer optical components means fewer alignment degrees of freedom and more stability","The simplest protocol that achieves the sensitivity is the most deployable protocol"],
       "Economics": ["One equation, one graph, one table. Can you make the argument?","You have too many specifications. Choose the one you believe and defend it","The twelve-sector model collapses to a two-sector insight. Use two sectors","Fewer variables, more conviction"],
       "Philosophy": ["One argument, one diagram, one example. Can you make the case?","You have too many qualifications. Choose the claim you believe and defend it","The twelve-distinction framework collapses to a two-distinction insight. Use two","Fewer concepts, more conviction"],
-      "Software Engineering": ["One file, one function, one loop. Can you solve it?","You have too many services. Merge them until you believe in the boundaries","The twelve-table schema collapses to a three-table insight. Use three tables","Fewer dependencies, more confidence"]
+      "Software Engineering": ["One file, one function, one loop. Can you solve it?","You have too many services. Merge them until you believe in the boundaries","The twelve-table schema collapses to a three-table insight. Use three tables","Fewer dependencies, more confidence"],
+      "Neural Architecture": ["One expansion rule, one experiment, one architecture. Can you make the argument?","You have too many growth signals. Choose the one you believe and defend it","The multi-criterion expansion algebra collapses to a single insight. Find it","Fewer parameters in the growth rule, more confidence in the result"]
     }
   },
   {
@@ -1832,7 +1933,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Filter the candidate applications by deployment readiness, not physics elegance","Use the noise spectrum as a filter — sense only in the quiet frequency band","Filter by cost: if the sensor costs more than the measurement is worth, rethink the approach","Spectral filtering in the readout removes background before it contaminates the signal"],
       "Economics": ["Filter out the trend. Is the cycle interesting?","Remove the top and bottom of the distribution. What does the middle show?","Control for everything that's not your mechanism. What's left?","Exclude the financial crisis years. Or include only them. Which is more revealing?"],
       "Philosophy": ["Filter out the historical context. What's the timeless structure of the argument?","Remove the technical vocabulary. What's the plain-language content?","Exclude the commentary. What does the text itself say?","Include only the premises you'd bet on. How much of the argument survives?"],
-      "Software Engineering": ["Filter out the bot traffic. What does real usage look like?","Remove the peak load. What does the baseline tell you?","Exclude the legacy endpoints. Or include only them. Which is more revealing?","Control for network variability. What's the actual application performance?"]
+      "Software Engineering": ["Filter out the bot traffic. What does real usage look like?","Remove the peak load. What does the baseline tell you?","Exclude the legacy endpoints. Or include only them. Which is more revealing?","Control for network variability. What's the actual application performance?"],
+      "Neural Architecture": ["Filter out the growth events that didn't change performance. What's left?","Remove the early expansions. What do the late ones tell you?","Exclude the easy tasks. Or include only them. Which is more revealing?","Control for network size. Is growth helping or is it just more parameters?"]
     }
   },
   {
@@ -1850,7 +1952,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Let the field geologist operate the sensor. Their feedback is worth more than your optimization","The undergraduate's fresh perspective — they don't know what's supposed to be impossible","Involve the end user in sensor design — they know what the output should look like","The electrical engineer sees integration problems the physicist has designed around"],
       "Economics": ["Ask the taxi driver about the exchange rate. They have a model too","The small business owner understands supply shocks better than your DSGE model does","What does the community organizer know about poverty that your data can't capture?","The non-economist's confusion about your paper is diagnostic. Listen to it"],
       "Philosophy": ["Ask the non-philosopher. Their confusion about your paper is diagnostic","The child's answer to the trolley problem is worth taking seriously","What does the person living the ethical dilemma know that the theorist doesn't?","The amateur's reading of the text, unburdened by the scholarly tradition, might see more clearly"],
-      "Software Engineering": ["Ask the customer what they think the system does. Their model is diagnostic","The new hire sees the codebase fresh. What confuses them is what's actually confusing","What does the non-technical founder understand about the product that the engineers don't?","The user's workaround is a feature request. Listen to it"]
+      "Software Engineering": ["Ask the customer what they think the system does. Their model is diagnostic","The new hire sees the codebase fresh. What confuses them is what's actually confusing","What does the non-technical founder understand about the product that the engineers don't?","The user's workaround is a feature request. Listen to it"],
+      "Neural Architecture": ["Ask someone who's never designed a network. What do they think should grow?","The practitioner who just makes it wider until it works has a growth strategy too","What does the neuroscience student think about your expansion criterion?","The beginner's confusion about your growth algebra is diagnostic. Listen to it"]
     }
   },
   {
@@ -1868,7 +1971,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Water is everywhere the sensor goes. Humidity, condensation, aqueous environments","Sensing in water: NMR, biomedical imaging, environmental monitoring — different physics","The thermal bath at the quantum level is often modeled as water — fluctuating, dissipative, everywhere","Underground water detection is an application that quantum gravimeters could own"],
       "Economics": ["Liquidity. Why is it a metaphor and a mechanism at the same time?","Money flows. Capital flows. What's the hydrology of your economy?","The economy is fluid, not solid. Your model treats it as a structure","Let the framework be loose. Not every question needs a fixed point"],
       "Philosophy": ["Concepts are fluid. Stop treating them as solid objects","Let the framework be loose. Not every problem needs an ism","Meaning flows. It doesn't sit still long enough for your definition","The argument should be permeable, not watertight. Let the world in"],
-      "Software Engineering": ["Data flows. What's the hydrology of your system?","The architecture is fluid, not fixed. Your diagram treats it as permanent","Let the design be loose. Not every service needs a contract","The system should be permeable. Not everything needs an API boundary"]
+      "Software Engineering": ["Data flows. What's the hydrology of your system?","The architecture is fluid, not fixed. Your diagram treats it as permanent","Let the design be loose. Not every service needs a contract","The system should be permeable. Not everything needs an API boundary"],
+      "Neural Architecture": ["Information flows. What's the hydrology of your growing network?","The architecture is fluid during training. Your formalism treats it as a sequence of fixed states","Let the growth rule be soft. Not every expansion needs a hard threshold","Capacity should flow to where it's needed, like water finding its level"]
     }
   },
   {
@@ -1886,7 +1990,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["You're worried about scalability — make scalability the paper, not a footnote","The engineering challenge is on your mind — design the sensor for manufacturing, not just physics","You're thinking about whether the quantum advantage is real. Design the definitive comparison","The doubt you have about the noise model — design the experiment to test it directly"],
       "Economics": ["The political situation is affecting your interpretation. Acknowledge it","You're worried about your own job security. That's relevant to your study of labor markets","The current crisis is in your head while you analyze the last one. Use that","Your lived experience of inflation is data. Don't exclude it for being anecdotal"],
       "Philosophy": ["Your political situation is affecting your reading of this text. Acknowledge it","The existential question underneath the technical one — what is it?","You're worried about something personal. That's relevant to your study of anxiety, or meaning, or death","The current moment is in your head while you analyze the eternal. Use that"],
-      "Software Engineering": ["You're worried about the next reorg. That's affecting your technical decisions. Acknowledge it","The production incident is in your head while you plan the next sprint. Use that anxiety","Your frustration with the tooling is data about the tooling","The deadline pressure is shaping the architecture. That's worth stating explicitly"]
+      "Software Engineering": ["You're worried about the next reorg. That's affecting your technical decisions. Acknowledge it","The production incident is in your head while you plan the next sprint. Use that anxiety","Your frustration with the tooling is data about the tooling","The deadline pressure is shaping the architecture. That's worth stating explicitly"],
+      "Neural Architecture": ["The scaling laws debate is affecting your growth algebra. Acknowledge it","You're worried your expansion rule is just NAS with extra steps. That's worth examining","The current attention on efficiency is shaping which growth trajectories you consider valid","Your experience training networks is data. Don't exclude it from the formalism"]
     }
   },
   {
@@ -1904,7 +2009,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["The reality: most quantum sensors don't outperform their classical equivalents in the field","The reality: the end user needs a number, not a quantum state","The reality: SWaP (size, weight, and power) determines deployment, not sensitivity","The reality: your lab prototype does not survive being put in a truck"],
       "Economics": ["The model says equilibrium. The market says panic. Which is the reality?","People don't optimize. They cope. Model coping","Your data measures the formal economy. Most economic life is informal","The GDP went up. Are people better off? Actually check"],
       "Philosophy": ["The theory says free will. Your experience says otherwise. Which is the reality?","People don't reason from principles. They rationalize after the fact","Your model of mind doesn't resemble any actual mind. Does that matter?","The map is elegant. The territory is a mess. Which are you studying?"],
-      "Software Engineering": ["The architecture diagram says distributed. The system says single point of failure. Which is real?","Users don't read documentation. They click randomly. Design for that","Your monitoring says healthy. The users say it's broken. Who's right?","The uptime report says 99.9%. The user experienced three outages this week. Reconcile that"]
+      "Software Engineering": ["The architecture diagram says distributed. The system says single point of failure. Which is real?","Users don't read documentation. They click randomly. Design for that","Your monitoring says healthy. The users say it's broken. Who's right?","The uptime report says 99.9%. The user experienced three outages this week. Reconcile that"],
+      "Neural Architecture": ["The algebra says the expansion is optimal. The network says it's slower. Which is reality?","Networks don't grow in nature. They're pruned. Does growing even make sense?","Your expansion criterion measures a proxy for capacity need. What's the actual need?","The grown architecture works. You don't know why the growth rule found it. That's the situation"]
     }
   },
   {
@@ -1922,7 +2028,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Last time you claimed quantum advantage without a fair classical comparison. Don't repeat it","The previous sensor drifted because you didn't characterize the thermal sensitivity","You chose the wrong application. This time, talk to the user first","Last time you didn't account for the sensor's dead time in the sensitivity estimate"],
       "Economics": ["Your last paper's identification strategy had a flaw you only see now. Don't repeat it","You over-controlled last time. Or under-controlled. Which?","The forecast was wrong. What does the direction of the error tell you?","You trusted that dataset before. It let you down. What's different now?"],
       "Philosophy": ["Your last paper's central distinction was too sharp. Don't repeat it","You were too charitable to the position last time. Or not charitable enough. Which?","The argument you published has a flaw you only see now. What's the pattern?","You trusted that interpretation before. It didn't hold up. What's different now?"],
-      "Software Engineering": ["Your last migration's rollback plan had a flaw you only see now. Don't repeat it","You over-abstracted last time. Or under-abstracted. Which?","The deploy failed. What does the failure mode tell you?","You trusted that library before. It let you down. What's different now?"]
+      "Software Engineering": ["Your last migration's rollback plan had a flaw you only see now. Don't repeat it","You over-abstracted last time. Or under-abstracted. Which?","The deploy failed. What does the failure mode tell you?","You trusted that library before. It let you down. What's different now?"],
+      "Neural Architecture": ["Your last growth rule expanded too aggressively. Don't repeat it","You initialized the new neurons wrong last time. What's different now?","The previous expansion threshold was set by gut feeling. It was wrong. What's the principle?","You trusted that expansion score before. The architecture it produced didn't generalize"]
     }
   },
   {
@@ -1940,7 +2047,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Your collaborator in engineering would ship the prototype. Your collaborator in physics would run another year of experiments","What would the most pragmatic person in your lab do with this sensor?","Ask your closest colleague to honestly evaluate the measurement — not the physics, the result","What would someone who doesn't need to publish in Nature Physics do differently?"],
       "Economics": ["Your co-author would run a different specification. Try theirs","What would your advisor have said about this approach?","The colleague whose taste you trust — would they believe this result?","Would you bet your own money on this estimate?"],
       "Philosophy": ["Your colleague would read the text differently. Try their reading","What would your advisor have said about this approach?","The philosopher whose judgment you trust most — would they believe this argument?","Would you stake your reputation on this claim?"],
-      "Software Engineering": ["Your colleague would choose a different technology. Try theirs","What would your mentor have said about this approach?","The engineer whose taste you trust — would they approve this pull request?","Would you bet your weekend on this deployment going smoothly?"]
+      "Software Engineering": ["Your colleague would choose a different technology. Try theirs","What would your mentor have said about this approach?","The engineer whose taste you trust — would they approve this pull request?","Would you bet your weekend on this deployment going smoothly?"],
+      "Neural Architecture": ["Your collaborator would use a different expansion signal. Try theirs","What would your advisor say about this growth criterion?","The colleague whose instinct you trust — would they believe this growth trajectory?","Would you use this expanded architecture in your own production system?"]
     }
   },
   {
@@ -1958,7 +2066,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["You wouldn't normally try sensing at that frequency — so try it","You wouldn't deploy a sensor you don't fully understand — but maybe partial understanding is enough","You would never claim an advantage you can't demonstrate. So demonstrate it","You wouldn't combine those two platforms. But what if they're complementary?"],
       "Economics": ["Which regression would you never run? Run it","What's the paper you consider beneath you? Write it","Which data source do you consider too informal? Use it","The method you've been dismissing — what is it capturing that yours isn't?"],
       "Philosophy": ["Which philosophical method would you never use? Try it","What's the position you consider too radical? Explore it","Which tradition do you consider irrelevant? Read it","The approach you've been dismissing — what is it seeing that yours isn't?"],
-      "Software Engineering": ["Which technology would you never use? Try it on a prototype","What's the architecture you consider beneath you? Build it","Which data source do you consider too unreliable? Instrument it","The approach you've been dismissing — what is it handling that yours isn't?"]
+      "Software Engineering": ["Which technology would you never use? Try it on a prototype","What's the architecture you consider beneath you? Build it","Which data source do you consider too unreliable? Instrument it","The approach you've been dismissing — what is it handling that yours isn't?"],
+      "Neural Architecture": ["Which growth criterion would you never use? Try it on a toy problem","What's the expansion rule you consider too simple to be interesting? Test it","Which architecture family do you consider unsuitable for growth? Grow it","The approach you've been dismissing — what is it capturing about capacity that yours isn't?"]
     }
   },
   {
@@ -1976,7 +2085,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Slow down the repetition rate. Does the sensitivity per shot improve?","Speed up the readout. Dead time is wasted sensitivity","The application needs real-time sensing. Your sensor reports once per second. Who needs to change?","Work at the speed of the signal, not the speed of your electronics"],
       "Economics": ["You've been thinking quarterly. Think in decades","You've been thinking long-run. What happens in the next six months?","Speed up the iteration. Run twenty specifications today instead of polishing one","Slow down. Spend a week with one data point"],
       "Philosophy": ["You've been thinking in argument-length. Think in epoch-length","You've been working historically. Try the synchronic view","Speed up. Write the argument in an hour instead of polishing for a year","Slow down. Spend a week with one sentence of the primary text"],
-      "Software Engineering": ["You've been thinking in sprints. Think in quarters","You've been planning long-term. What needs to ship this week?","Speed up the iteration. Deploy ten times today instead of perfecting one release","Slow down. Spend a week reading one module line by line"]
+      "Software Engineering": ["You've been thinking in sprints. Think in quarters","You've been planning long-term. What needs to ship this week?","Speed up the iteration. Deploy ten times today instead of perfecting one release","Slow down. Spend a week reading one module line by line"],
+      "Neural Architecture": ["You've been growing per-epoch. Try per-step","You've been thinking about single growth events. Think about the entire growth trajectory","Speed up the expansions. Grow ten times in the first hundred steps","Slow down. One growth event. Train to convergence. Then decide about the next one"]
     }
   },
   {
@@ -1994,7 +2104,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["The sensor must meet a specification, not just demonstrate a principle","Design for SWaP, reliability, calibration interval, and mean time between failures","Engineering means trade-offs. State yours: sensitivity vs. bandwidth, precision vs. robustness","You are an engineer: the sensor must work in the field, not just in the paper"],
       "Economics": ["Design the mechanism, don't just estimate the effect","Your job is to build something that works, not to prove something is true","What's the plumbing? Follow the actual flow of money through the system","Stop explaining the economy. Try to fix the part that's broken"],
       "Philosophy": ["Don't just analyze the concept — build one that works better","Your job is to construct something useful, not to prove something is true","What's the plumbing? Trace the actual inferential connections","Stop interpreting the world. Design a better conceptual toolkit"],
-      "Software Engineering": ["Design the system, don't just critique the existing one","Your job is to build something that works, not to prove something is correct","What's the plumbing? Follow the actual flow of data through the system","Stop explaining the architecture. Fix the part that's broken"]
+      "Software Engineering": ["Design the system, don't just critique the existing one","Your job is to build something that works, not to prove something is correct","What's the plumbing? Follow the actual flow of data through the system","Stop explaining the architecture. Fix the part that's broken"],
+      "Neural Architecture": ["Design the growth mechanism, don't just analyze the expansion score","Your job is to build a network that works, not to prove an algebra is correct","What's the plumbing? Follow the actual gradient flow through the newly grown connections","Stop explaining why networks should grow. Build one that grows and works"]
     }
   },
   {
@@ -2012,7 +2123,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["You can only optimize one parameter at a time. Choose sensitivity, bandwidth, or robustness for this iteration","One measurement, one question, one answer. Don't overload the protocol","Each experimental run is one data point. Accept that and plan for thousands","One sensor for one application. Don't try to build the universal quantum instrument"],
       "Economics": ["One identification, one causal claim, one paper. Don't overreach","Estimate one elasticity well rather than ten badly","Answer one question. The literature is a conversation, not a monologue","You're trying to explain everything at once. Pick the smallest explainable piece"],
       "Philosophy": ["One distinction, one argument, one paper. Don't overreach","Answer one question. The literature is a conversation, not a monologue","Make one clear point rather than five gestures","You're trying to solve the whole problem at once. Find the smallest solvable piece"],
-      "Software Engineering": ["One feature, one service, one deploy. Don't overreach","Fix one bug well rather than five superficially","Answer one user need. The product is a conversation, not a monologue","You're trying to solve everything at once. Pick the smallest shippable piece"]
+      "Software Engineering": ["One feature, one service, one deploy. Don't overreach","Fix one bug well rather than five superficially","Answer one user need. The product is a conversation, not a monologue","You're trying to solve everything at once. Pick the smallest shippable piece"],
+      "Neural Architecture": ["One growth event, one measurement, one conclusion. Don't overreach","Grow one neuron well rather than ten without understanding","Answer one question about expansion. The literature is a conversation, not a manifesto","You're trying to characterize all growth at once. Pick the smallest characterizable case"]
     }
   },
   {
@@ -2030,7 +2142,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Your novel pulse sequence is worth pursuing even if it doesn't extend a famous group's work","The sensing protocol you invented doesn't need validation from a bigger lab","Your unconventional platform choice might be exactly right for this application","The idea that came from your own measurement is as valid as one from a theory paper"],
       "Economics": ["The obvious theory might be right. Test it before inventing something new","Your original intuition, before you read the literature, had merit","Not every contribution needs a novel identification strategy","You noticed the pattern. That's the contribution. Stop looking for someone else who said it first"],
       "Philosophy": ["Your original thought, before you checked the literature, had merit","The simple idea might be right. Test it before inventing something baroque","Not every contribution needs to be a response to someone else","You noticed something. That's the contribution. Stop looking for someone else who said it first"],
-      "Software Engineering": ["The obvious solution might be right. Test it before reaching for something clever","Your first instinct, before you read the blog posts, had merit","Not every feature needs a novel architecture","You noticed the pattern. That's the insight. Stop looking for a library that does it"]
+      "Software Engineering": ["The obvious solution might be right. Test it before reaching for something clever","Your first instinct, before you read the blog posts, had merit","Not every feature needs a novel architecture","You noticed the pattern. That's the insight. Stop looking for a library that does it"],
+      "Neural Architecture": ["Your original intuition about when to expand had merit. Test it before reading more papers","The simple growth rule might be right. Try it before inventing the algebra","Not every expansion criterion needs a novel information-theoretic justification","You noticed that the gradient variance predicts where growth helps. That's the contribution"]
     }
   },
   {
@@ -2048,7 +2161,8 @@ const STRATEGIES = [
       "Quantum Sensing": ["Design a sensor for a quantity that has never been measured","What would you sense if quantum mechanics worked differently?","The unknown field is the blank card — the sensor will write its own discovery","Leave room in the protocol for the signal you haven't imagined yet"],
       "Economics": ["What question would you ask if you didn't have to publish the answer?","The empty model. No assumptions. What do you actually know?","Start from nothing. Not from the textbook, not from the literature, from nothing","If economics didn't exist, what would you invent to understand this?"],
       "Philosophy": ["What question would you ask if you didn't have to publish the answer?","No presuppositions. No tradition. No method. What do you see?","Start from nothing. Not from the canon, not from the literature, from nothing","If philosophy didn't exist, what would you invent to make sense of this?"],
-      "Software Engineering": ["What would you build if nobody had to maintain it?","No requirements. No constraints. No stakeholders. What do you make?","Start from nothing. Not from the boilerplate, not from the template, from nothing","If software engineering didn't exist, what would you invent to solve this?"]
+      "Software Engineering": ["What would you build if nobody had to maintain it?","No requirements. No constraints. No stakeholders. What do you make?","Start from nothing. Not from the boilerplate, not from the template, from nothing","If software engineering didn't exist, what would you invent to solve this?"],
+      "Neural Architecture": ["What growth rule would you design if no one had to review the paper?","No formalism. No algebra. No precedent. What does the network need?","Start from nothing. Not from the literature, not from the framework, from the raw computation","If neural architecture growth didn't have a field, what would you invent to make it work?"]
     }
   }
 ];

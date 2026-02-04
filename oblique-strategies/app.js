@@ -13,7 +13,8 @@
     "Quantum Sensing",
     "Economics",
     "Philosophy",
-    "Software Engineering"
+    "Software Engineering",
+    "Neural Architecture"
   ];
 
   var selectedDomain = DOMAINS[0];
