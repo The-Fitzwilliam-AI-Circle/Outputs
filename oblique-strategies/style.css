@@ -140,10 +140,26 @@ main {
   flex-shrink: 0;
   margin-top: 0.15rem;
   transition: color 0.15s ease;
+  position: relative;
 }
 
 .info-btn:hover {
   color: var(--accent);
+}
+
+/* Info button nudge — amber glow on the icon, smooth in and out */
+.info-btn .info-icon {
+  transition: color 0.8s ease;
+}
+
+.info-btn.nudge .info-icon {
+  color: #C9944A;
+  transition: color 0.8s ease;
+}
+
+.info-btn.nudge-out .info-icon {
+  color: var(--text-muted);
+  transition: color 1s ease;
 }
 
 /* Tooltip / explanation popover */
@@ -215,6 +231,46 @@ footer em {
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* About toggle */
+.about-toggle {
+  appearance: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: inherit;
+  color: var(--text-muted);
+  font-family: inherit;
+  padding: 0;
+  text-decoration: underline;
+  text-decoration-color: var(--border);
+  text-underline-offset: 2px;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+
+.about-toggle:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+
+.about-body {
+  margin-top: 1rem;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  text-align: left;
+}
+
+.about-body p {
+  margin-bottom: 0.65rem;
+}
+
+.about-body p:last-child {
+  margin-bottom: 0;
 }
 
 /* Responsive */

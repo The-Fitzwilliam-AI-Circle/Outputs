@@ -10,7 +10,10 @@
     "Synthetic Biology",
     "Context Modeling",
     "Biomaterials",
-    "Quantum Sensing"
+    "Quantum Sensing",
+    "Economics",
+    "Philosophy",
+    "Software Engineering"
   ];
 
   var selectedDomain = DOMAINS[0];
@@ -60,8 +63,15 @@
     return idx;
   }
 
+  var nudgeTimer = null;
+
   function drawCard() {
     tooltipEl.hidden = true;
+
+    // Cancel any pending nudge
+    if (nudgeTimer) clearTimeout(nudgeTimer);
+    infoBtn.classList.remove("nudge");
+    infoBtn.classList.remove("nudge-out");
 
     // Fade out
     cardEl.classList.remove("fade-in");
@@ -85,12 +95,42 @@
       // Fade in
       cardEl.classList.remove("fade-out");
       cardEl.classList.add("fade-in");
+
+      // Nudge the info button 3 times with exponential backoff
+      // First at 4s, second at 8s after first ends, third at 16s after second ends
+      var nudgeCycle = 3300; // one full nudge cycle: 800ms in + 1500ms hold + 1000ms out
+      var nudgeCount = 0;
+      var delays = [4000, 8000, 16000]; // initial delay, then backoff gaps
+
+      function scheduleNudge() {
+        if (nudgeCount >= 3) return;
+        nudgeTimer = setTimeout(function () {
+          if (tooltipEl.hidden) {
+            infoBtn.classList.remove("nudge-out");
+            infoBtn.classList.add("nudge");
+            setTimeout(function () {
+              infoBtn.classList.remove("nudge");
+              infoBtn.classList.add("nudge-out");
+              setTimeout(function () {
+                infoBtn.classList.remove("nudge-out");
+                nudgeCount++;
+                scheduleNudge();
+              }, 1100);
+            }, 1500);
+          }
+        }, delays[nudgeCount]);
+      }
+
+      scheduleNudge();
     }, 150);
   }
 
   // Tooltip toggle
   infoBtn.addEventListener("click", function (e) {
     e.stopPropagation();
+    infoBtn.classList.remove("nudge");
+    infoBtn.classList.remove("nudge-out");
+    if (nudgeTimer) clearTimeout(nudgeTimer);
     if (tooltipEl.hidden) {
       tooltipEl.textContent = infoBtn.dataset.explanation || "";
       tooltipEl.hidden = false;
@@ -112,6 +152,17 @@
   drawBtn.addEventListener("click", function () {
     drawCard();
   });
+
+  // About section toggle
+  var aboutToggle = document.getElementById("about-toggle");
+  var aboutBody = document.getElementById("about-body");
+  if (aboutToggle && aboutBody) {
+    aboutToggle.addEventListener("click", function () {
+      var expanded = aboutBody.hidden;
+      aboutBody.hidden = !expanded;
+      aboutToggle.setAttribute("aria-expanded", expanded);
+    });
+  }
 
   // Init
   buildChips();
